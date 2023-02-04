@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import router from './router.js'
+// All vue files will use this style.css
+import './style.css'
 
-createApp(App).mount('#app')
+createApp(App)
+    .use(router)
+    .mount('#app')

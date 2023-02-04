@@ -1,5 +1,5 @@
 <template>
     <div>
-        Properties Page
+        404 - Not Found
     </div>
 </template>
