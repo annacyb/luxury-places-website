@@ -1,11 +1,7 @@
 <template>
     <main>
         <div>
-            <!-- <NavBar :buttonName="zmienna"></NavBar>
-            <div class="home">Home Page</div>
-            <button @click="addToCount">{{ count }}</button>
-            <div>{{ properties }}</div>
-            <div>{{ showSth() }}</div> -->
+            <!-- <NavBar></NavBar> -->
         </div>
     </main>
 </template>
@@ -15,7 +11,8 @@
     @use '../sass/base/reset';
     @use '../sass/base/colors';
     @use '../sass/base/typo';
-    @use '../sass/home/mainHome';
+    // @use '../sass/home/mainHome';
+
     // .home {
     //     color: colors.$orange-color3;
     // }
@@ -36,15 +33,15 @@
         data() {
             return {
                 // variables that will be used in HTML
-                // properties: [],
-                // zmienna: 'CLICK ME',
-                // count: 0,
+                
             }
         },
+
         // after loading the page, JS runs this function first.
         created() {
             this.getProperties()
         },
+
         // JS functions that I will be using for changing variables in data()
         methods: {
             async getProperties() {
@@ -53,12 +50,8 @@
                     this.properties.push(doc.data());
                 });
             },
-            // addToCount() {
-            //     this.count = this.count + 1;
-            // },
-            // showSth() {
-            //     return 'show something'
-            // }
+        
+            
         }
     }
 </script>
