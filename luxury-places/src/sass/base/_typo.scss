@@ -1,0 +1,81 @@
+@use "./colors";
+@import url("https://fonts.googleapis.com/css2?family=Bigshot+One&family=Public+Sans&display=swap");
+
+html {
+  font-size: 100%;
+}
+
+// ??? TO CHANGE
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+    font-family: "Open Sans", sans-serif;
+    color: colors.$blue-color4;
+}
+
+li,
+a {
+  font-family: "Open Sans", sans-serif;
+  color: colors.$blue-color4;
+}
+
+//TO CHANGE- possibly change the main font to something else
+$font1: "Open Sans", sans-serif;
+
+
+
+
+// EXAMPLES FROM PREVIOUS PROJECT
+
+// ORDERS page
+
+// #queue-nr > p {
+//     font-weight: 700;
+//     font-size: 1.4rem;
+//     padding-left: 5px;
+// }
+
+// .button-break,
+// .button-leave,
+// .button-ready {
+//     text-align: center;
+//     font-size: 0.9vw;
+//     font-weight: 500;
+//     letter-spacing: 1px;
+//     color: colors.$blue-color4;
+// }
+
+///INVENTORY AND STATISTICS
+
+// #storageAndStat {
+//   h1 {
+//     font-size: 1.5rem;
+//     text-align: center;
+//     padding: 2.5vw;
+//     font-weight: 400;
+//   }
+// }
+
+
+
+// @media screen and (min-width: 600px) {
+//   .tap-name,
+//   .stock-name {
+//     font-size: 1.9vw;
+//   }
+
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .tap-name,
+//   .stock-name {
+//     font-size: 1.05vw;
+//   }
+
+// }

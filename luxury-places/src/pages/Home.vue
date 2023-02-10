@@ -1,43 +1,65 @@
 <template>
-    <div>
-        <div class="home">Home Page</div>
-        <div>{{ properties }}</div>
-    </div>
+    <main>
+        <div>
+            <NavBar :buttonName="zmienna"></NavBar>
+            <div class="home">Home Page</div>
+            <button @click="addToCount">{{ count }}</button>
+            <div>{{ properties }}</div>
+            <div>{{ showSth() }}</div>
+        </div>
+    </main>
 </template>
 
+<!-- "scoped" is needed so that style here only defines HTML elements in this file -->
+<!-- and not also in components imported from another files -->
 <style scoped lang="scss">
-@use "../assets/colors";
-.home {
-    color: colors.$orange-color3;
-}
+    @use '../sass/base/reset';
+    @use '../sass/base/colors';
+    @use '../sass/base/typo';
+    @use '../sass/home/mainHome';
+    .home {
+        color: colors.$orange-color3;
+    }
 </style>
 
 
 <script>
-import { collection, getDocs } from "firebase/firestore";
+    // import child vue components
+    import NavBar from './components/NavBar.vue'
+    // firebase settings
+    import { collection, getDocs } from "firebase/firestore";
 
-// import database connection from Firebase
-import db from "../firebaseInit.js";
+    // import database connection from Firebase
+    import db from "../firebaseInit.js";
 
-export default {
-    data() {
-        return {
-            // variables that will be used in HTML
-            properties: []
-        }
-    },
-    // after loading the page, JS runs this function first.
-    created() {
-        this.getProperties()
-    },
-    // JS functions that I will be using for changing variables in data()
-    methods: {
-        async getProperties() {
-            const queryProperties = await getDocs(collection(db, "properties"));
-            queryProperties.forEach((doc) => {
-                this.properties.push(doc.data());
-            });
+    export default {
+        components: {NavBar},
+        data() {
+            return {
+                // variables that will be used in HTML
+                properties: [],
+                zmienna: 'CLICK ME',
+                count: 0,
+            }
+        },
+        // after loading the page, JS runs this function first.
+        created() {
+            this.getProperties()
+        },
+        // JS functions that I will be using for changing variables in data()
+        methods: {
+            async getProperties() {
+                const queryProperties = await getDocs(collection(db, "properties"));
+                queryProperties.forEach((doc) => {
+                    this.properties.push(doc.data());
+                });
+            },
+            addToCount() {
+                this.count = this.count + 1;
+            },
+            showSth() {
+                return 'show something'
+            }
         }
     }
-}
 </script>

@@ -37,4 +37,4 @@ router.afterEach((to, from) => {
     document.title = to.meta.title;
 });
 
-export default router;
+export {router};
