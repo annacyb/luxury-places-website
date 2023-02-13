@@ -1,16 +1,21 @@
 <template>
-    <main>
-        <div>
-            
-        </div>
-    </main>
+    <div>
+        <h1>Footer</h1>  
+    </div>
 </template>
 
 <!-- "scoped" is needed so that style here only defines HTML elements in this file -->
 <style scoped lang="scss">
-    @use '../sass/base/reset';
-    @use '../sass/base/colors';
-    @use '../sass/base/typo';
+    @use '../../sass/base/reset';
+    @use '../../sass/base/colors';
+    @use '../../sass/base/typo';
+
+    // div {
+    //     height: 100vh;
+    //     width: 100vw;
+    //     background-color: bisque;
+    //     border: solid orange 10px;
+    // }
     
 </style>
 
@@ -23,7 +28,7 @@
     import { collection, getDocs } from "firebase/firestore";
 
     // import database connection from Firebase
-    import db from "../firebaseInit.js";
+    import db from "../../firebaseInit";
 
     export default {
         // components: {NavBar},
@@ -36,17 +41,17 @@
 
         // after loading the page, JS runs this function first.
         created() {
-            this.getProperties()
+            // this.getProperties()
         },
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            async getProperties() {
-                const queryProperties = await getDocs(collection(db, "properties"));
-                queryProperties.forEach((doc) => {
-                    this.properties.push(doc.data());
-                });
-            },
+            // async getProperties() {
+            //     const queryProperties = await getDocs(collection(db, "properties"));
+            //     queryProperties.forEach((doc) => {
+            //         this.properties.push(doc.data());
+            //     });
+            // },
         
 
         }

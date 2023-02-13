@@ -2,6 +2,51 @@
 @import "../base/colors";
 @import "../base/typo";
 
-main {
-    border: solid 4px yellow;
+#navBar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+
+#hero {
+    background-color: rgb(255, 255, 189);
+    height: 100vh;
+    width: 100vw;
+}
+
+#search {
+    background-color: pink;
+    height: 645px;
+    width: 100vw;
+}
+
+#exclusive {
+    background-color: green;
+    height: 845px;
+    width: 100vw;
+}
+
+#searchBy {
+    background-color: blue;
+    height: 777px;
+    width: 100vw;
+}
+
+#aboutUs {
+    background-color: purple;
+    height: 710px;
+    width: 100vw;
+}
+
+#testimonials {
+    background-color: orange;
+    height: 698px;
+    width: 100vw;
+}
+
+#footer {
+    background-color: yellow;
+    height: 642px;
+    width: 100vw;
 }

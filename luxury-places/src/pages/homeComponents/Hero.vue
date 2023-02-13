@@ -1,16 +1,14 @@
 <template>
-    <main>
-        <div>
-            
-        </div>
-    </main>
+    <div>
+        <h1>Section Hero</h1>  
+    </div>
 </template>
 
 <!-- "scoped" is needed so that style here only defines HTML elements in this file -->
 <style scoped lang="scss">
-    @use '../sass/base/reset';
-    @use '../sass/base/colors';
-    @use '../sass/base/typo';
+    @use '../../sass/base/reset';
+    @use '../../sass/base/colors';
+    @use '../../sass/base/typo';
     
 </style>
 
@@ -23,30 +21,30 @@
     import { collection, getDocs } from "firebase/firestore";
 
     // import database connection from Firebase
-    import db from "../firebaseInit.js";
+    import db from "../../firebaseInit";
 
     export default {
         // components: {NavBar},
         data() {
             return {
                 // variables that will be used in HTML
-                
+                // properties: []
             }
         },
 
         // after loading the page, JS runs this function first.
         created() {
-            this.getProperties()
+            // this.getProperties()
         },
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            async getProperties() {
-                const queryProperties = await getDocs(collection(db, "properties"));
-                queryProperties.forEach((doc) => {
-                    this.properties.push(doc.data());
-                });
-            },
+            // async getProperties() {
+            //     const queryProperties = await getDocs(collection(db, "properties"));
+            //     queryProperties.forEach((doc) => {
+            //         this.properties.push(doc.data());
+            //     });
+            // },
         
 
         }
