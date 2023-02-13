@@ -21,7 +21,7 @@
 
 <script>
     // import child vue components
-    import NavBar from './components/NavBar.vue'
+    import NavBar from './globalComponents/NavBar.vue'
     // firebase settings
     import { collection, getDocs } from "firebase/firestore";
 
@@ -51,7 +51,7 @@
                 });
             },
         
-            
+
         }
     }
 </script>
