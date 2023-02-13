@@ -1,30 +1,13 @@
 <template>
-  <div>
-    <div id="navBar">
+  <div id="homeGrid">
       <NavBar :buttonName="zmienna"></NavBar>
-    </div>
-    <section id="hero">
-      <Hero></Hero>
-    </section>
-    <section id="search">
-      <Search></Search>
-    </section>
-    <section id="exclusive">
-      <Exclusive></Exclusive>
-    </section>
-    <section id="searchBy">
-      <SearchBy></SearchBy>
-    </section>
-    <section id="aboutUs">
-      <AboutUs></AboutUs>
-    </section>
-    <section id="testimonials">
-      <Testimonials></Testimonials>
-    </section>
-    <section id="footer">
-      <Footer></Footer>
-    </section>
-    
+      <Hero id="hero"></Hero>
+      <Search id="search"></Search>
+      <Exclusive id="exclusive"></Exclusive>
+      <SearchBy id="searchBy"></SearchBy>
+      <AboutUs id="aboutUs"></AboutUs>
+      <Testimonials id="testimonials"></Testimonials>
+      <Footer id="footer"></Footer>
   </div>
 </template>
 
@@ -61,7 +44,7 @@
       return {
         // variables that will be used in HTML
         properties: [],
-        zmienna: '  NAVI BUTTON',
+        zmienna: 'BUTTON',
         count: 0,
       };
     },

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background">
         <h1>Section Testimonials</h1>  
     </div>
 </template>
@@ -10,12 +10,11 @@
     @use '../../sass/base/colors';
     @use '../../sass/base/typo';
 
-    // div {
-    //     height: 100vh;
-    //     width: 100vw;
-    //     background-color: bisque;
-    //     border: solid orange 10px;
-    // }
+    .background {
+        background-color: colors.$white;
+        height: 698px;
+        // width: 100vw;
+    }
     
 </style>
 

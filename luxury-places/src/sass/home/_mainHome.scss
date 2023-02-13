@@ -1,52 +1,47 @@
-@import "../base/reset";
-@import "../base/colors";
-@import "../base/typo";
+@use "../base/reset";
+@use "../base/colors";
+@use "../base/typo";
 
-#navBar {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 2;
-  }
+
+#homeGrid {
+    display: grid;
+    height: auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 0;
+    grid-template-areas: 
+    "hero"
+    "search"
+    "exclusive"
+    "searchBy"
+    "about"
+    "testimonials"
+    "footer" ;
+}
 
 #hero {
-    background-color: rgb(255, 255, 189);
-    height: 100vh;
-    width: 100vw;
+    grid-area: hero;
 }
 
 #search {
-    background-color: pink;
-    height: 645px;
-    width: 100vw;
+    grid-area: search;
 }
 
 #exclusive {
-    background-color: green;
-    height: 845px;
-    width: 100vw;
+    grid-area: exclusive;
 }
 
 #searchBy {
-    background-color: blue;
-    height: 777px;
-    width: 100vw;
+    grid-area: searchBy;
 }
 
 #aboutUs {
-    background-color: purple;
-    height: 710px;
-    width: 100vw;
+    grid-area: about;
 }
 
 #testimonials {
-    background-color: orange;
-    height: 698px;
-    width: 100vw;
+    grid-area: testimonials;
 }
 
 #footer {
-    background-color: yellow;
-    height: 642px;
-    width: 100vw;
+    grid-area: footer;
 }

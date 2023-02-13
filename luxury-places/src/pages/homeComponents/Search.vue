@@ -1,6 +1,11 @@
 <template>
-    <div>
-        <h1>Section Search</h1>  
+    <div class="background">
+        <div class="contentGrid">
+            <div class="content">
+                <h1>Section Search</h1> 
+                <p>Lorem ipsum es dolores amet hfie uih eh ui huee huei e eh e efi eief  ei efefh e hee ihu ee i eui</p> 
+            </div>
+        </div>
     </div>
 </template>
 
@@ -10,12 +15,25 @@
     @use '../../sass/base/colors';
     @use '../../sass/base/typo';
 
-    // div {
-    //     height: 100vh;
-    //     width: 100vw;
-    //     background-color: bisque;
-    //     border: solid orange 10px;
-    // }
+    .background {
+        background-color: colors.$white;
+        height: 645px;
+        // width: 100vw;
+    }
+
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr 48px 1264px 48px 1fr;
+        gap: 0;
+        grid-template-areas: 
+        ". . content . ."  ;
+        // margin-left: auto;
+        // margin-right: auto;
+}
+
+    .content {
+        grid-area: content;
+    }
     
 </style>
 
