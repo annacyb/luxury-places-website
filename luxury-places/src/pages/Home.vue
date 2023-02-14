@@ -1,6 +1,6 @@
 <template>
   <div id="homeGrid">
-      <NavBar :buttonName="zmienna"></NavBar>
+      <NavBar :buttonName="nameButton"></NavBar>
       <Hero id="hero"></Hero>
       <Search id="search"></Search>
       <Exclusive id="exclusive"></Exclusive>
@@ -44,7 +44,7 @@
       return {
         // variables that will be used in HTML
         properties: [],
-        zmienna: 'BUTTON',
+        nameButton: 'BUTTON',
         count: 0,
       };
     },

@@ -5,9 +5,9 @@
         </video>
         <div class="heroContent">
             <div class="contentGrid">
-                <div class="hContent">
+                <div class="bottomContent">
                     <h1>16 years of Swiss real estate expertise for your dream home</h1> 
-                    <button style="height: 52px; width: 282px;">DISCOVER PROPERTIES</button> 
+                    <buttonPrimary :buttonName="nameOfButton"></buttonPrimary> 
                 </div>
             </div>
         </div>
@@ -49,21 +49,24 @@
         align-items: end;
     }
 
-    .hContent {
-        width: 560px;
+    .bottomContent {
+        width: 480px;
         grid-area: content;
         border-left: white 1px solid;
         padding-left: 48px;
         margin-bottom: 10vh;
     }
 
-    
+    .bottomContent h1 {
+        margin-bottom: 16px;
+    }
+
 </style>
 
 
 <script>
     // import child vue components
-    // import NavBar from './globalComponents/NavBar.vue'
+    import buttonPrimary from '../globalComponents/buttonPrimary.vue'
 
     // firebase settings
     import { collection, getDocs } from "firebase/firestore";
@@ -72,11 +75,11 @@
     import db from "../../firebaseInit";
 
     export default {
-        // components: {NavBar},
+        components: {buttonPrimary},
         data() {
             return {
                 // variables that will be used in HTML
-                // properties: []
+                nameOfButton: "DISCOVER PROPERTIES"
             }
         },
 
