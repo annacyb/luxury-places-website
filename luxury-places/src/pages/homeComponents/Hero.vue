@@ -1,14 +1,18 @@
 <template>
-    <div class="background">
-        <div class="contentGrid">
-            <div class="content">
-                <div class="fillSpace"></div>
-                <h1>Section Hero</h1> 
-                <p>Lorem ipsum es dolores amet hfie uih eh ui huee huei e eh e efi eief  ei efefh e hee ihu ee i eui</p> 
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="../../../videos/luxury-places-video-desktop.mp4" type="video/mp4">
+            <source src="../../../videos/luxury-places-video-desktop.webm" type="video/webm">
+        </video>
+        <div class="heroContent">
+            <div class="contentGrid">
+                <div class="hContent">
+                    <h1>16 years of Swiss real estate expertise for your dream home</h1> 
+                    <button style="height: 52px; width: 282px;">DISCOVER PROPERTIES</button> 
+                </div>
             </div>
         </div>
-    </div>
 </template>
+
 
 <!-- "scoped" is needed so that style here only defines HTML elements in this file -->
 <style scoped lang="scss">
@@ -16,12 +20,25 @@
     @use '../../sass/base/colors';
     @use '../../sass/base/typo';
 
-    .background {
-        background-color: colors.$blue1;
+    #backgroundVideo {
+        z-index: -1;
+        object-fit: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .heroContent {
         height: 100vh;
-        // width: 100vw;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: inherit;
     }
 
+    .heroContent h1 {
+        color: white;
+    }
     .contentGrid {
         display: grid;
         grid-template-columns: 1fr 48px 1264px 48px 1fr;
@@ -32,16 +49,14 @@
         align-items: end;
     }
 
-    .content {
+    .hContent {
+        width: 560px;
         grid-area: content;
         border-left: white 1px solid;
         padding-left: 48px;
-        padding-bottom: 12vh;
+        margin-bottom: 10vh;
     }
 
-    .fillSpace {
-        flex-grow: 1;
-    }
     
 </style>
 

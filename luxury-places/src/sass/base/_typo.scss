@@ -14,45 +14,41 @@ $bold_font3: 600;
 
 
 html {
-  font-size: 100%;
+  font-size: 112,5%; // default is 16px , so 112,5% will be 18px
 }
 
-h1,
+h1 {
+  font-family: $font1;
+  font-weight: 100;
+  size: 2,078rem; // 37,4px
+  letter-spacing: 1px;
+  line-height: 2,894rem;
+}
+
 h2
 {
-  font-family: 'Goudy Old Style', serif;
+  font-family: $font1;
   color: colors.$grey1;
-  opacity: 0.9;
+  font-size: 1,733rem; // 31,2px
 }
 
 h3 {
   font-family: $font2;
   font-weight: $semilight_font2;
-  font-size: 20px;
+  font-size: 1,444rem; // 26px
 }
 
 h4 {
   font-family: $font3;
   font-weight: $regular_font3;
-  font-size: 20px;
-}
-
-h5 {
-  font-family: $font2;
-  font-weight: $semibold_font2;
-  font-size: 20px;
-}
-
-h6 {
-  font-family: $font3;
-  font-weight: $bold_font3;
-  font-size: 20px;
+  font-size: 1,2rem; // 21,6px
 }
 
 
 p {
   font-family: $font2;
   font-weight: 100;
+  font-size: 1rem;
 }
 
 button {
@@ -68,53 +64,6 @@ a {
 }
 
 
-
-
-// EXAMPLES FROM PREVIOUS PROJECT
-
-// ORDERS page
-
-// #queue-nr > p {
-//     font-weight: 700;
-//     font-size: 1.4rem;
-//     padding-left: 5px;
-// }
-
-// .button-break,
-// .button-leave,
-// .button-ready {
-//     text-align: center;
-//     font-size: 0.9vw;
-//     font-weight: 500;
-//     letter-spacing: 1px;
-//     color: colors.$blue-color4;
-// }
-
-///INVENTORY AND STATISTICS
-
-// #storageAndStat {
-//   h1 {
-//     font-size: 1.5rem;
-//     text-align: center;
-//     padding: 2.5vw;
-//     font-weight: 400;
-//   }
-// }
-
-
-
-// @media screen and (min-width: 600px) {
-//   .tap-name,
-//   .stock-name {
-//     font-size: 1.9vw;
-//   }
-
-// }
-
 // @media screen and (min-width: 1200px) {
-//   .tap-name,
-//   .stock-name {
-//     font-size: 1.05vw;
-//   }
 
 // }
