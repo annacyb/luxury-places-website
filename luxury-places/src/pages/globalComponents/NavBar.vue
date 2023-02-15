@@ -2,21 +2,24 @@
     <div class="navSettings">
         <div class="contentGrid">
             <div class="content">
-                <div id="logo_wrapper">
-                    <img id="logo_full" src="../../../icons/fullLogo-white.svg" alt="Logo Luxury Places">
+                <div id="logoWrapper">
+                    <img id="logoFull" src="../../../icons/fullLogo-white.svg" alt="Logo Luxury Places">
                 </div>
                 <div class="buttons">
-                    <button>{{ buttonName }}</button>
-                    <button>{{ buttonName }}</button>
+                    <div class="mainButtons">
+                        <buttonNavi :buttonName="savedButtonNavi" iconType="heart" iconColor="white" iconSize="medium"></buttonNavi>
+                        <buttonNavi :buttonName="loginButtonNavi" iconType="user" iconColor="white" iconSize="small"></buttonNavi>
+                    </div>
                     <div class="line"></div>
+                    <!-- <button>{{ buttonName }}</button>
                     <button>{{ buttonName }}</button>
-                    <button>{{ buttonName }}</button>
-                    <button>{{ buttonName }}</button>
+                    <button>{{ buttonName }}</button> -->
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 
 <style scoped lang="scss">
   @use "../../sass/base/reset";
@@ -46,13 +49,18 @@
         grid-area: content;
         display: flex;
         justify-content: space-between;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        border-bottom: solid 1px white;
+        border-bottom: solid 1px rgba(255, 255, 255, .6);
     }
 
-    #logo_wrapper {
-        height: 52px;
+    #logoWrapper {
+        height: 44px;
+        width: auto;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    #logoFull {
+        height: inherit;
         width: auto;
     }
 
@@ -63,20 +71,46 @@
         align-items: center;
     }
 
+    .mainButtons {
+        display: flex;
+        column-gap: 0px;
+        height: 100%;
+    }
+
     .line {
         height: 20px;
         width: 1px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, .6);
     }
 
 </style>
 
 <script>
-    export default {
-        props: ['buttonName'],
+// import child vue components
+import buttonNavi from './buttonNavi.vue';
+import Icon from './Icon.vue';
+
+export default {
+        components: {buttonNavi, Icon},
         data() {
             return {
+                // variables that will be used in HTML
+                savedButtonNavi: "SAVED",
+                loginButtonNavi: "JOIN/LOG IN"
             }
         },
+
+        // after loading the page, JS runs this function first.
+        created() {
+            // this.getProperties()
+        },
+
+        // JS functions that I will be using for changing variables in data()
+        methods: {
+            testme() {
+                console.log("HELLO CONSOLE")
+            }
+    
+        }
     }
 </script>

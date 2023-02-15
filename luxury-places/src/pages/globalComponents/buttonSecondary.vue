@@ -1,5 +1,5 @@
 <template>
-    <div @click="testme()" class="buttonPrimary">{{ buttonName }}</div>
+    <div @click="testme()" class="buttonSecondary">{{ buttonName }}</div>
 </template>
 
 <style scoped lang="scss">
@@ -7,7 +7,7 @@
   @use "../../sass/base/colors";
   @use "../../sass/base/typo";
 
-    .buttonPrimary {
+    .buttonSecondary {
         height: 48px;
         width: fit-content;
         padding-right: 20px;
@@ -15,10 +15,10 @@
         font-family: "Segoe UI";
         font-size: 20px;
         letter-spacing: 1px;
-        color: white;
-        background-color: colors.$gold1;
+        color: colors.$grey1;
+        background-color: none;
         border-radius: 4px;
-        border: none;
+        border: solid 1px rgb(22 22 22/ 0.6);
         white-space: nowrap;
 
         // to center horizontally and vertically
@@ -37,15 +37,15 @@
 
         &:hover {
             transition: all 200ms linear;
-            color: colors.$grey1;
-            background-color: white;
+            color: white;
+            background-color: colors.$grey1;
             opacity: 1;
         }
         
         &:active {
             transition: all 200ms linear;
             opacity: .75;
-            background-color: colors.$gold3;
+            background-color: colors.$grey2;
             opacity: 1;
         }
     }

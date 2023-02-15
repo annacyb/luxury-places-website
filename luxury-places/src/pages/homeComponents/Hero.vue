@@ -7,7 +7,7 @@
             <div class="contentGrid">
                 <div class="bottomContent">
                     <h1>16 years of Swiss real estate expertise for your dream home</h1> 
-                    <buttonPrimary :buttonName="nameOfButton"></buttonPrimary> 
+                    <buttonPrimary :buttonName="namePrimary"></buttonPrimary> 
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     .bottomContent {
         width: 480px;
         grid-area: content;
-        border-left: white 1px solid;
+        border-left: solid 1px rgba(255, 255, 255, .6);
         padding-left: 48px;
         margin-bottom: 10vh;
     }
@@ -79,7 +79,7 @@
         data() {
             return {
                 // variables that will be used in HTML
-                nameOfButton: "DISCOVER PROPERTIES"
+                namePrimary: "DISCOVER PROPERTIES",
             }
         },
 
