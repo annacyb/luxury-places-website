@@ -1,17 +1,50 @@
+@use "./reset";
 @use "./colors";
 
 @import url('https://fonts.cdnfonts.com/css/goudy-old-style');
-@import url('../../../fonts/SegUIVar.ttf') format('truetype');
-
 $font1: 'Goudy Old Style', serif;
-$font2: 'Segoe UI Variable Text', sans-serif;
-$font3: 'Segoe UI Variable Small Light', sans-serif;
 
-// SEGOE UI font-weights
-$semilight_font2: 100;
-$regular_font3: 100;
-$semibold_font2: 400;
-$bold_font3: 600;
+// SEGOE UI font
+@font-face {
+  font-family: SegoeUI;
+  src:
+    local("Segoe UI Light"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src:
+    local("Segoe UI Semilight"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src:
+    local("Segoe UI"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: SegoeUI;
+  src:
+    local("Segoe UI Semibold"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf) format("truetype");
+    font-weight: 600;
+  }
+  @font-face {
+  font-family: SegoeUI;
+  src:
+    local("Segoe UI Bold"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype");
+    font-weight: 700;
+  }
+
+
 
 
 html {
@@ -34,34 +67,29 @@ h2
 }
 
 h3 {
-  font-family: $font2;
-  font-weight: $semilight_font2;
+  font-family: "Segoe UI Semilight";
   font-size: 1,444rem; // 26px
 }
 
 h4 {
-  font-family: $font3;
-  font-weight: $regular_font3;
+  font-family: "Segoe UI";
   font-size: 1,2rem; // 21,6px
 }
 
 
 p {
-  font-family: $font2;
-  font-weight: 100;
+  font-family: "Segoe UI Semilight";
   font-size: 1rem;
 }
 
 button {
-  font-family: $font3;
-  font-weight: $regular_font3;
+  font-family: "Segoe UI";
 }
 
 
 li,
 a {
-  font-family: $font3;
-  font-weight: $regular_font3;
+  font-family: "Segoe UI";
 }
 
 

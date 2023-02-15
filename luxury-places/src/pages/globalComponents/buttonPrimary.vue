@@ -12,7 +12,7 @@
         width: fit-content;
         padding-right: 24px;
         padding-left: 24px;
-        font-family: typo.$font3;
+        font-family: "Segoe UI";
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px;
