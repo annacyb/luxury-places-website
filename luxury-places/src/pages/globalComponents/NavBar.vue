@@ -8,12 +8,13 @@
                 <div class="buttons">
                     <div class="mainButtons">
                         <buttonNavi :buttonName="savedButtonNavi" iconType="heart" iconColor="white" iconSize="medium"></buttonNavi>
-                        <buttonNavi :buttonName="loginButtonNavi" iconType="user" iconColor="white" iconSize="small"></buttonNavi>
+                        <buttonNavi :buttonName="loginButtonNavi" iconType="user" iconColor="white" iconSize="medium"></buttonNavi>
                     </div>
                     <div class="line"></div>
-                    <!-- <button>{{ buttonName }}</button>
-                    <button>{{ buttonName }}</button>
-                    <button>{{ buttonName }}</button> -->
+                    <div class="selectButtons">
+                        <buttonSelectNavi :buttonName="languageButton"></buttonSelectNavi>
+                        <buttonSelectNavi :buttonName="currencyButton"></buttonSelectNavi>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,11 +68,17 @@
     .buttons {
         display: flex;
         justify-content: flex-end;
-        gap: 16px;
+        gap: 8px;
         align-items: center;
     }
 
     .mainButtons {
+        display: flex;
+        column-gap: 0px;
+        height: 100%;
+    }
+
+    .selectButtons {
         display: flex;
         column-gap: 0px;
         height: 100%;
@@ -88,15 +95,18 @@
 <script>
 // import child vue components
 import buttonNavi from './buttonNavi.vue';
+import buttonSelectNavi from './buttonSelectNavi.vue';
 import Icon from './Icon.vue';
 
 export default {
-        components: {buttonNavi, Icon},
+        components: { buttonNavi, Icon, buttonSelectNavi },
         data() {
             return {
                 // variables that will be used in HTML
                 savedButtonNavi: "SAVED",
-                loginButtonNavi: "JOIN/LOG IN"
+                loginButtonNavi: "JOIN/LOG IN",
+                languageButton: "EN",
+                currencyButton: "CHF"
             }
         },
 
