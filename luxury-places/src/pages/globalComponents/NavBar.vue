@@ -15,6 +15,7 @@
                         <buttonSelectNavi :buttonName="languageButton"></buttonSelectNavi>
                         <buttonSelectNavi :buttonName="currencyButton"></buttonSelectNavi>
                     </div>
+                    <MenuButton></MenuButton>
                 </div>
             </div>
         </div>
@@ -97,9 +98,10 @@
 import buttonNavi from './buttonNavi.vue';
 import buttonSelectNavi from './buttonSelectNavi.vue';
 import Icon from './Icon.vue';
+import MenuButton from './MenuButton.vue'
 
 export default {
-        components: { buttonNavi, Icon, buttonSelectNavi },
+        components: { buttonNavi, Icon, buttonSelectNavi, MenuButton },
         data() {
             return {
                 // variables that will be used in HTML
