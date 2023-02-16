@@ -84,11 +84,12 @@
     }
 
     p {
+        color: colors.$grey1;
         text-align: center;
         font-family: "Segoe UI"!important;
         font-size: 0.8rem !important;
         opacity: 0.8;
-        // margin-top: 20px;
+        margin-top: 16px;
     }
     
 </style>

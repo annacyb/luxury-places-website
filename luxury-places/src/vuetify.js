@@ -6,6 +6,10 @@ import * as directives from 'vuetify/directives'
 const vuetify = createVuetify({
     components,
     directives,
+
+    theme: {
+        defaultTheme: 'dark'
+    }
 })
 
 export default vuetify

@@ -1,5 +1,5 @@
 <template>
-    <div @click="testme()" class="buttonPrimary">{{ buttonName }}</div>
+    <div @click="testme()" class="buttonPrimary"><span>{{ buttonName }}</span></div>
 </template>
 
 <style scoped lang="scss">
@@ -22,8 +22,8 @@
         white-space: nowrap;
 
         // to center horizontally and vertically
-        display: table-cell;
-        vertical-align: middle;
+        display: flex;
+        align-items: center;
 
         cursor: pointer;
         user-select: none;
