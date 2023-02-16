@@ -3,11 +3,11 @@
         <div class="contentGrid">
             <div class="content">
                 <div class="searchImages">
-                    <img src="../../../images/home/search1.png" alt="Property 1" class="searchImage">
-                    <img src="../../../images/home/search2.png" alt="Property 2" class="searchImage">
-                    <img src="../../../images/home/search3.png" alt="Property 3" class="searchImage">
-                    <img src="../../../images/home/search4.png" alt="Property 4" class="searchImage">
-                    <img src="../../../images/home/search5.png" alt="Property 5" class="searchImage">
+                    <img src="/images/home/search1.png" alt="Property 1" class="searchImage">
+                    <img src="/images/home/search2.png" alt="Property 2" class="searchImage">
+                    <img src="/images/home/search3.png" alt="Property 3" class="searchImage">
+                    <img src="/images/home/search4.png" alt="Property 4" class="searchImage">
+                    <img src="/images/home/search5.png" alt="Property 5" class="searchImage">
                 </div>
                 <div class="sectionTitle">
                     <hr class="line">
@@ -42,7 +42,6 @@
         // margin-left: auto;
         // margin-right: auto;
 }
-
     .content {
         grid-area: content;
     }
@@ -89,7 +88,7 @@
         font-family: "Segoe UI"!important;
         font-size: 0.8rem !important;
         opacity: 0.8;
-        margin-top: 20px;
+        // margin-top: 20px;
     }
     
 </style>

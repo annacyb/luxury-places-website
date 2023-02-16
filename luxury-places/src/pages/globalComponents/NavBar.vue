@@ -3,7 +3,7 @@
         <div class="contentGrid">
             <div class="content">
                 <div id="logoWrapper">
-                    <img id="logoFull" src="../../../icons/fullLogo-white.svg" alt="Logo Luxury Places">
+                    <img id="logoFull" src="/icons/fullLogo-white.svg" alt="Logo Luxury Places">
                 </div>
                 <div class="buttons">
                     <div class="mainButtons">
@@ -48,6 +48,7 @@
     }
 
     .content {
+        height: 60px;
         grid-area: content;
         display: flex;
         justify-content: space-between;

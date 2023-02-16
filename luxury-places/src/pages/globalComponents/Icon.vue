@@ -10,13 +10,13 @@
 
     // ICON TYPES
     .default {
-         background: url("../../../icons/default.svg");
+         background: url("/icons/default.svg");
     }
     .heart {
-        background: url("../../../icons/heart.svg");
+        background: url("/icons/heart.svg");
     }
     .user {
-        background: url("../../../icons/user.svg");
+        background: url("/icons/user.svg");
     }
 
     // ICON COLORS

@@ -1,6 +1,9 @@
 <template>
     <div class="searchBar">
-        
+        <v-combobox
+            label="Combobox"
+            :items="['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming']"
+        ></v-combobox>
     </div>
 </template>
 

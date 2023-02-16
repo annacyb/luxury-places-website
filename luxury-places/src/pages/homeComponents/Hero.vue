@@ -1,7 +1,7 @@
 <template>
         <video autoplay muted loop id="backgroundVideo">
-            <source src="../../../videos/luxury-places-video-desktop.mp4" type="video/mp4">
-            <source src="../../../videos/luxury-places-video-desktop.webm" type="video/webm">
+            <source src="/videos/luxury-places-video-desktop.mp4" type="video/mp4">
+            <source src="/videos/luxury-places-video-desktop.webm" type="video/webm">
         </video>
         <div class="heroContent">
             <div class="contentGrid">
@@ -50,7 +50,7 @@
     }
 
     .bottomContent {
-        width: 480px;
+        width: 540px;
         grid-area: content;
         border-left: solid 1px rgba(255, 255, 255, .6);
         padding-left: 48px;
