@@ -3,7 +3,8 @@
         <div>
             <v-combobox
                 label="Your aim"
-                :items="['Buy', 'Rent', 'Sold']"
+                v-model="filterStore.aim"
+                :items="['Buy', 'Rent']"
                 variant="underlined"
                 density="comfortable"
             ></v-combobox>
@@ -11,6 +12,7 @@
         <div>
             <v-text-field
                 label="Search"
+                v-model="filterStore.search"
                 prepend-inner-icon="mdi-magnify"
                 variant="outlined"
                 density="comfortable"
@@ -19,6 +21,7 @@
         <div>
             <v-combobox
                 label="Type"
+                v-model="filterStore.propertyType"
                 :items="['Apartment' , 'Historical', 'House', 'Land']"
                 variant="underlined"
                 density="comfortable"
@@ -27,6 +30,7 @@
         <div>
             <v-combobox
                 label="Location"
+                v-model="filterStore.location"
                 :items="['City Center', 'Lakeside', 'Rural', 'Ski Resort','Urban']"
                 variant="underlined"
                 density="comfortable"
@@ -36,6 +40,7 @@
         <div>
             <v-combobox
                 label="Beds&Baths"
+                v-model="filterStore.beds"
                 :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
                 variant="underlined"
                 density="comfortable"
@@ -45,6 +50,7 @@
         <div>
             <v-combobox
                 label="More"
+                v-model="filterStore.more"
                 :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
                 variant="underlined"
                 density="comfortable"
@@ -87,17 +93,22 @@
 <script>
 
     import buttonPrimary from './buttonPrimary.vue';
+    import { searchFilters } from '../../states/filters.js'
 
     export default {
         // props: ['buttonName', 'iconType', 'iconColor', 'iconSize'],
         components: {buttonPrimary},
+        setup() {
+            // setting up the filters storage functions in this component
+            const filterStore = searchFilters()
+
+            return {filterStore}
+        },
         data() {
             return {
                 searchButton: 'SEARCH',
             }
         },
-        methods: {
-            
-        }
+        methods: {}
     }
 </script>

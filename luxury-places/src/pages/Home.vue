@@ -1,3 +1,4 @@
+<!-- HTML -->
 <template>
   <div id="homeGrid">
       <NavBar :buttonName="nameButton"></NavBar>
@@ -11,8 +12,9 @@
   </div>
 </template>
 
-<!-- STYLE -->
-<!-- "scoped" is needed so that style here only defines HTML elements in this file -->
+<!-- CSS -->
+<!-- "scoped" is needed so that style here only -->
+<!-- defines HTML elements in this file -->
 <style scoped lang="scss">
   @use "../sass/base/reset";
   @use "../sass/base/colors";
