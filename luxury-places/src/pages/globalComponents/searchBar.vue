@@ -1,7 +1,7 @@
 <template>
     <div class="searchBar">
-        <div>
-            <v-combobox
+        <div class="searchItemSmall">
+            <v-combobox 
                 label="Your aim"
                 v-model="filterStore.aim"
                 :items="['Buy', 'Rent']"
@@ -9,8 +9,8 @@
                 density="comfortable"
             ></v-combobox>
         </div>
-        <div>
-            <v-text-field
+        <div class="searchItemLarge">
+            <v-text-field 
                 label="Search"
                 v-model="filterStore.search"
                 prepend-inner-icon="mdi-magnify"
@@ -18,8 +18,8 @@
                 density="comfortable"
             ></v-text-field>
         </div>
-        <div>
-            <v-combobox
+        <div class="searchItemSmall">
+            <v-combobox 
                 label="Type"
                 v-model="filterStore.propertyType"
                 :items="['Apartment' , 'Historical', 'House', 'Land']"
@@ -27,8 +27,8 @@
                 density="comfortable"
             ></v-combobox>
          </div>
-        <div>
-            <v-combobox
+        <div class="searchItemSmall">
+            <v-combobox 
                 label="Location"
                 v-model="filterStore.location"
                 :items="['City Center', 'Lakeside', 'Rural', 'Ski Resort','Urban']"
@@ -37,7 +37,7 @@
                 multiple
             ></v-combobox>
         </div>
-        <div>
+        <div class="searchItemSmall">
             <v-combobox
                 label="Beds&Baths"
                 v-model="filterStore.beds"
@@ -47,7 +47,7 @@
                 multiple
             ></v-combobox>
         </div>
-        <div>
+        <div class="searchItemSmall">
             <v-combobox
                 label="More"
                 v-model="filterStore.more"
@@ -79,13 +79,12 @@
         padding-left: 16px;
     }
 
-    // VUETIFY components - style changes
-    .searchBar div:nth-of-type(1) {flex-grow: 1;}
-    .searchBar div:nth-of-type(2) {flex-grow: 2;}
-    .searchBar div:nth-of-type(3) {flex-grow: 1;}
-    .searchBar div:nth-of-type(4) {flex-grow: 1;}
-    .searchBar div:nth-of-type(5) {flex-grow: 1;}
-    .searchBar div:nth-of-type(6) {flex-grow: 1;}
+    .searchItemSmall {
+        flex: 1 1 0;
+    }
+    .searchItemLarge {
+        flex: 2.5 1 0;
+    }
 
 </style>
 

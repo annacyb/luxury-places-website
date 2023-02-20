@@ -1,3 +1,5 @@
+<!-- Cheching out if changing filters in search bar works on the other pages -->
+
 <template>
     <div>
         {{ filterStore.location }}
