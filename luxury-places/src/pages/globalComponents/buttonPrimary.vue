@@ -20,6 +20,7 @@
         border-radius: 4px;
         border: none;
         white-space: nowrap;
+        text-transform: uppercase;
 
         // to center horizontally and vertically
         display: flex;

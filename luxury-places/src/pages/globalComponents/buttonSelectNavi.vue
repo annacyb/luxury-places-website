@@ -20,6 +20,7 @@
         font-family: "Segoe UI" !important;
         font-size: 20px;
         white-space: nowrap;
+        text-transform: uppercase;
        
         // to center horizontally and vertically
         display: flex;

@@ -19,6 +19,7 @@
         background-color: none;
         border-radius: none;
         border: none;
+        text-transform: uppercase;
 
         font-family: "Segoe UI" !important;
         font-size: 20px;

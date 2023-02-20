@@ -7,6 +7,11 @@
                     <hr class="line">
                     <buttonSecondary :buttonName="showAllButton"></buttonSecondary>
                 </div>
+                <div class="propertiesInfoSection">
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
+                </div>
             </div>
         </div>
     </div>
@@ -58,12 +63,19 @@
         flex-grow: 1;
     }
 
+    .propertiesInfoSection {
+        display: flex;
+        column-gap: 20px;
+        height: 565px;
+    }
+
 </style>
 
 
 <script>
     // import child vue components
     import buttonSecondary from "../globalComponents/buttonSecondary.vue"
+    import propertyInfoBox from "../globalComponents/propertyInfoBox.vue"
 
     // firebase settings
     import { collection, getDocs } from "firebase/firestore";
@@ -72,7 +84,7 @@
     import db from "../../firebaseInit";
 
     export default {
-        components: {buttonSecondary},
+        components: {buttonSecondary, propertyInfoBox},
         data() {
             return {
                 // variables that will be used in HTML
