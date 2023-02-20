@@ -2,8 +2,10 @@
     <div class="background">
         <div class="contentGrid">
             <div class="content">
-                <div>
-                    <h1>Section Exclusive</h1> 
+                <div class="sectionTitle">
+                    <h2>Exclusive Offers</h2> 
+                    <hr class="line">
+                    <buttonSecondary :buttonName="showAllButton"></buttonSecondary>
                 </div>
             </div>
         </div>
@@ -35,12 +37,33 @@
         grid-area: content;
     }
 
+    .sectionTitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 24px; 
+        margin-top: 84px;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        font-weight: 100;
+    }
+
+    .line {
+        border-top: 1px solid colors.$grey1;
+        opacity: 0.4;
+        flex-grow: 1;
+    }
+
 </style>
 
 
 <script>
     // import child vue components
-    // import NavBar from './globalComponents/NavBar.vue'
+    import buttonSecondary from "../globalComponents/buttonSecondary.vue"
 
     // firebase settings
     import { collection, getDocs } from "firebase/firestore";
@@ -49,11 +72,12 @@
     import db from "../../firebaseInit";
 
     export default {
-        // components: {NavBar},
+        components: {buttonSecondary},
         data() {
             return {
                 // variables that will be used in HTML
-                properties: []
+                properties: [],
+                showAllButton: "SHOW ALL"
             }
         },
 

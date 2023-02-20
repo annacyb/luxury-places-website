@@ -77,6 +77,8 @@
         padding-top: 16px;
         padding-right: 16px;
         padding-left: 16px;
+
+        box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.15);
     }
 
     .searchItemSmall {

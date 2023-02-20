@@ -22,7 +22,8 @@
         white-space: nowrap;
 
         // to center horizontally and vertically
-        display: table-cell;
+        display: flex;
+        align-items: center;
         vertical-align: middle;
 
         cursor: pointer;
@@ -33,7 +34,7 @@
         // -moz-appearance:    none;
         // appearance:         none;
         
-        box-shadow: 1px 3px 10px rgb(0 0 0 / 0.2);
+        box-shadow: 1px 3px 10px rgb(0 0 0 / 0.1);
 
         &:hover {
             transition: all 200ms linear;
