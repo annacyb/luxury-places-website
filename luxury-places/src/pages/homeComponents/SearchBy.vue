@@ -1,6 +1,12 @@
 <template>
     <div class="background">
-        <h1>Section SearchBy</h1>  
+        <div class="contentGrid">
+            <div class="content">
+                <div>
+                    <h1>Section SearchBy</h1> 
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -15,6 +21,20 @@
         height: 777px;
         // width: 100vw;
     }
+
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr 48px 1264px 48px 1fr;
+        gap: 0;
+        grid-template-areas: 
+        ". . content . ."  ;
+        // margin-left: auto;
+        // margin-right: auto;
+}
+    .content {
+        grid-area: content;
+    }
+
     
 </style>
 

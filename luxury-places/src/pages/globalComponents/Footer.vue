@@ -1,6 +1,12 @@
 <template>
-    <div class="contentSettings">
-        <h1>Footer</h1>  
+    <div class="background">
+        <div class="contentGrid">
+            <div class="content">
+                <div>
+                    <h1>Footer</h1> 
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -10,11 +16,24 @@
     @use '../../sass/base/colors';
     @use '../../sass/base/typo';
 
-    .contentSettings {
+    .background {
         background-color: colors.$blue1;
         height: 642px;
         // width: 100vw;
+    } 
+    
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr 48px 1264px 48px 1fr;
+        gap: 0;
+        grid-template-areas: 
+        ". . content . ."  ;
+        // margin-left: auto;
+        // margin-right: auto;
 }
+    .content {
+        grid-area: content;
+    }
     
 </style>
 
