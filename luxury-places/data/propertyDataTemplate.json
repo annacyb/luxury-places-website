@@ -1,0 +1,61 @@
+{
+    "id": "",
+    "name": "",
+    "ref": "",
+    "aim": "sale",
+    "price": "",
+    "type": "",
+    "location": "",
+    "address": "",
+    "addressDetails": "",
+    "size": "",
+    "beds": "",
+    "baths": "",
+    "plot": "",
+
+    "agent": "",
+    "agentsPhone": "",
+    "agentsPhoto": "",
+
+    "photo1": "",
+    "photo2": "",
+    "photo3": "",
+    "photo4": "",
+
+    "title": "",
+    "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+    "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+    "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+    "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+
+    "generalInfo": {
+        "status": "Available",
+        "yearBuild": 2015,
+        "style": "Classical",
+        "furnished": true,
+        "skiResort": 86
+    },
+
+    "indoorAmenities": {
+        "terrace": false,
+        "stories": 2,
+        "floor": "1&2",
+        "indoorPool": false,
+        "elevator": false,
+    },
+
+    "outdoorAmenities": {
+        "parking": 2,
+        "garden": true,
+        "outdoorPool": true,
+        "outdoorKitchen": false,
+        "tennisCourt": false,
+        "firePit": false,
+    },
+
+    "luxuryFeatures": [
+        "cinema room", "sauna", "Air Conditioning"
+    ],
+
+    "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+}

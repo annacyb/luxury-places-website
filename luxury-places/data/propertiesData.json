@@ -1,0 +1,147 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Property1",
+            "ref": "#4075481",
+            "aim": "sale",
+            "price": 2500000,
+            "type": "apartment",
+            "location": "city center, urban",
+            "address": "Geneva, Geneva",
+            "addressDetails": "Rte de Florissant, 1206 Geneva, CH",
+            "size": 160,
+            "beds": 5,
+            "baths": 3,
+            "plot": 68,
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+        
+            "photo1": "property1-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.png",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Sleek and modern apartment offering easy access to the Geneva's top attractions.",
+            "descriptionPart1": "Experience luxury living in the heart of Geneva with this stunning modern apartment in the prestigious Champel district. Built in 2022, this 2-stories 160m2 property boasts 5 spacious bedrooms, 3 sleek bathrooms and a fully furnished interior, perfect for those seeking comfortable and stylish living. ",
+            "descriptionPart2": "The modern design of the property is truly impressive, featuring a cinema room and a 20m2  walk in closet. In the property you can unwind in the private sauna or a by swimming in an outdoor heated pool after a long day. Moreover, a truly unique feature of this luxurious apartment is 22m2 outdoor terrace surronded by a beautiful garden.",
+            "descriptionPart3": "Boasting an unparalleled feature, this magnificent apartment showcases a sprawling 22m2 outdoor terrace that is ensconced by an stunning garden. Imagine spending your evenings under the starry sky, surrounded by fragrant blooms, while indulging in a mouth-watering feast grilled to perfection.",
+            "descriptionPart4" : "Located in one of Geneva's most desirable neighborhoods, this apartment offers the best of both worlds with its combination of luxury and convenience. Don't miss this opportunity to own this magnificent apartment and enjoy its numerous luxurious features.",
+        
+            "generalInfo": {
+                "status": "available",
+                "yearBuild": 2022,
+                "style": "Modern, Minimalist",
+                "furnished": true,
+                "skiResort": 168
+            },
+        
+            "indoorAmenities": {
+                "terrace": 22,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": false,
+                "elevator": true,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 2,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": true,
+            },
+        
+            "luxuryFeatures": [
+                "cinema room",
+                "walk in closet",
+                "sauna",
+                "terrace",
+                "outdoor pool",
+                "garden",
+                "fire pit",
+                "elevator",
+                "air conditioning",
+            ],
+        
+            "areaDescription": "The property is located in a Champel district in Geneva, surrounded by stunning Swiss Alps views. Experience the luxury of living in the heart of the city, where residents have access to world-class shopping, dining, and cultural attractions. The area is known for its elegant homes, beautifully landscaped parks, and peaceful streets."
+        },
+
+        {
+            "id": 2,
+            "name": "Property2",
+            "ref": "#4075522",
+            "aim": "rent",
+            "price": 160000,
+            "type": "apartment",
+            "location": "city center, urban",
+            "address": "Zurich, Zurich",
+            "addressDetails": "Klarastrasse, 8008 Zurich, CH",
+            "size": 142,
+            "beds": 3,
+            "baths": 3,
+            "plot": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+        
+            "photo1": "property2-1.jpg",
+            "photo2": "property2-2.jpg",
+            "photo3": "property2-3.png",
+            "photo4": "property2-4.jpg",
+        
+            "title": "Elegant apartment with panoramic view of Zurich from it’s expansive rooftop terrace",
+            "descriptionPart1": "Welcome to your dream property in one of the most exclusive districts of Zurich. This luxurious apartment is located in the heart of Seefeld, offering easy access to the city's old town and vibrant nightlife district. Built in 2020, this apartment features a blend of modern and Art Deco design, creating a unique and elegant ambiance, with high-end finishes and appliances.",
+            "descriptionPart2": "With a spacious floor plan of 142m2, this modern and stylish apartment boasts 3 bedrooms and 3 bathrooms and billiard room, perfect for entertaining friends and family. Take advantage of the many amenities this apartment has to offer, indoor fire pit in the master bedroom, adding a touch of luxury and sophistication to your home. In this property you can also unwind in an indoor, heated swimming pool and jacuzzi.",
+            "descriptionPart3": "As the last two stories of the building, this apartment offers complete privacy and seclusion. Enjoy breathtaking views of the city from your private rooftop terrace with a bar, spanning 40m2, perfect for hosting outdoor gatherings or simply relaxing with a glass of wine.",
+            "descriptionPart4" : "At a price of 750000 CHF, this apartment is a rare find in one of Zurich's most desirable neighborhoods. Don't miss your chance to own this exquisite home and experience the best that city living has to offer. Contact us today to schedule a viewing! .",
+        
+            "generalInfo": {
+                "status": "available",
+                "yearBuild": 2020,
+                "style": "Modern, Art Deco",
+                "furnished": true,
+                "skiResort": 87
+            },
+        
+            "indoorAmenities": {
+                "terrace": 40,
+                "stories": 2,
+                "floor": "5&6",
+                "indoorPool": true,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 3,
+                "garden": false,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": true,
+            },
+        
+            "luxuryFeatures": [
+                "city view",
+                "indoor pool",
+                "jacuzzi",
+                "biliard room",
+                "rooftop terrace",
+                "bar",
+                "indoor fire pit",
+                "walk in closet",
+                "air conditioning",
+            ],
+        
+            "areaDescription": "Experience the ultimate in luxury living in Zurich's prestigious Seefeld district. Immerse yourself in sophistication with its elegant tree-lined streets, designer boutiques, and world-class dining options. Enjoy the tranquility of lakeside living, all in one of the city's most desirable locations. Plus, with its close proximity to Zurich's dynamic city center and thriving nightlife, residents can enjoy the best of both worlds - a serene sanctuary to call home and the excitement of the urban scene just moments away."
+        },
+
+        {},
+
+        {}
+    ]
+}
