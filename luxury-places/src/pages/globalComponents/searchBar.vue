@@ -27,21 +27,21 @@
                 density="comfortable"
             ></v-combobox>
          </div>
-        <div class="searchItemSmall">
+         <div class="searchItemSmall">
             <v-combobox 
-                label="Location"
+                label="Region"
                 v-model="filterStore.location"
-                :items="['City Center', 'Lakeside', 'Rural', 'Ski Resort','Urban']"
+                :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
                 variant="underlined"
                 density="comfortable"
                 multiple
             ></v-combobox>
         </div>
         <div class="searchItemSmall">
-            <v-combobox
-                label="Beds&Baths"
-                v-model="filterStore.beds"
-                :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
+            <v-combobox 
+                label="Location"
+                v-model="filterStore.location"
+                :items="['City Center', 'Lakeside', 'Rural', 'Ski Resort','Urban']"
                 variant="underlined"
                 density="comfortable"
                 multiple

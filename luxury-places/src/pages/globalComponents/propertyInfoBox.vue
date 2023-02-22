@@ -10,21 +10,11 @@
             />
           </div>
           <div class="top-elements">
-            <div class="chips">
-              <div class="chipsWrapper">
-                <span class="textChips">VIDEO</span>
-              </div>
-              <div class="chipsWrapper">
-                <span class="textChips">VIDEO</span>
-              </div>
+            <div class="tagsWrapper">
+              <propertyTag tagName="EXCLUSIVE"></propertyTag>
+              <propertyTag tagName="VIDEO"></propertyTag>
             </div>
-            <button class="save-button">
-              <img
-                alt="heart icon"
-                src="/icons/heart.svg"
-                class="heartIcon"
-              />
-            </button>
+            <saveButtonPropertyBox></saveButtonPropertyBox>
           </div>
         </div>
         <div class="bottom-info">
@@ -117,12 +107,15 @@
   
 
   <script>
+import propertyTag from './propertyTag.vue';
+import saveButtonPropertyBox from './saveButtonPropertyBox.vue'
+
     export default {
-        name: 'propertyInfoBox',
-        props: {},
-        data() {
-        return {
-        }
-        },
-    }
+    name: "propertyInfoBox",
+    props: {},
+    data() {
+        return {};
+    },
+    components: { propertyTag, saveButtonPropertyBox }
+}
   </script>

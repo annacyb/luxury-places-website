@@ -43,7 +43,7 @@
                 "stories": 2,
                 "floor": "1&2",
                 "indoorPool": false,
-                "elevator": true,
+                "elevator": true
             },
         
             "outdoorAmenities": {
@@ -52,7 +52,7 @@
                 "outdoorPool": true,
                 "outdoorKitchen": false,
                 "tennisCourt": false,
-                "firePit": true,
+                "firePit": true
             },
         
             "luxuryFeatures": [
@@ -64,7 +64,7 @@
                 "garden",
                 "fire pit",
                 "elevator",
-                "air conditioning",
+                "air conditioning"
             ],
         
             "areaDescription": "The property is located in a Champel district in Geneva, surrounded by stunning Swiss Alps views. Experience the luxury of living in the heart of the city, where residents have access to world-class shopping, dining, and cultural attractions. The area is known for its elegant homes, beautifully landscaped parks, and peaceful streets."
@@ -113,7 +113,7 @@
                 "stories": 2,
                 "floor": "5&6",
                 "indoorPool": true,
-                "elevator": false,
+                "elevator": false
             },
         
             "outdoorAmenities": {
@@ -122,7 +122,7 @@
                 "outdoorPool": false,
                 "outdoorKitchen": false,
                 "tennisCourt": false,
-                "firePit": true,
+                "firePit": true
             },
         
             "luxuryFeatures": [
@@ -134,7 +134,7 @@
                 "bar",
                 "indoor fire pit",
                 "walk in closet",
-                "air conditioning",
+                "air conditioning"
             ],
         
             "areaDescription": "Experience the ultimate in luxury living in Zurich's prestigious Seefeld district. Immerse yourself in sophistication with its elegant tree-lined streets, designer boutiques, and world-class dining options. Enjoy the tranquility of lakeside living, all in one of the city's most desirable locations. Plus, with its close proximity to Zurich's dynamic city center and thriving nightlife, residents can enjoy the best of both worlds - a serene sanctuary to call home and the excitement of the urban scene just moments away."
