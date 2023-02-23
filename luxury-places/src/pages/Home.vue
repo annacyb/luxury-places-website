@@ -33,13 +33,10 @@
   import AboutUs from "./homeComponents/AboutUs.vue";
   import Testimonials from "./homeComponents/Testimonials.vue";
   import Footer from "./globalComponents/Footer.vue";
-
   // firebase settings
   import { collection, getDocs } from "firebase/firestore";
-
   // import database connection from Firebase
   import db from "../firebaseInit.js";
-
   export default {
     components: { NavBar, Hero, Search, Exclusive, SearchBy, AboutUs, Testimonials, Footer },
     data() {
