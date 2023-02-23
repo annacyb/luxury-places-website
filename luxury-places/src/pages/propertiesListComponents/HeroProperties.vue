@@ -1,14 +1,14 @@
 <template>
     <div class="backgroundPhoto">
         <img src="../../../public/images/heroPropertiesList.jpg" alt="background photo">
-    </div>
-    <div class="heroContent">
-        <div class="contentGrid">
-            <div class="bottomContent">
-                <h1>Properties Search</h1> 
+        <!-- <div class="heroContent">
+            <div class="contentGrid">
+                <div class="bottomContent">
+                    <h1>Properties</h1> 
+                </div>
             </div>
-        </div>
-    </div>
+        </div>  -->
+    </div> 
 </template>
 
 
@@ -18,25 +18,22 @@
 @use '../../sass/base/colors';
 @use '../../sass/base/typo';
 
-#backgroundPhoto {
-    z-index: -1;
-    object-fit: cover;
-    position: absolute;
-    height: 100%;
-    // width: 100%;
-    width: auto;
-    top: 0;
-    left: 0;
+.backgroundPhoto {
+    position: relative;
 }
-
-img {
+.backgroundPhoto img {
+    position: fixed;
+    left: 50%;
     width: 100vw;
+    min-width: 1360px;
+    min-height: 150px;
+    z-index: -1;
+    transform: translateX(-50%);
 }
 .heroContent {
-    // height: 100vh;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .heroContent h1 {
@@ -53,15 +50,14 @@ img {
 }
 
 .bottomContent {
-    width: 540px;
+    width: fit-content;
     grid-area: content;
     border-left: solid 1px rgba(255, 255, 255, .6);
     padding-left: 48px;
-    margin-bottom: 10vh;
 }
 
 .bottomContent h1 {
-    margin-bottom: 16px;
+    
 }
 
 </style>
