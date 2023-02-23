@@ -2,23 +2,19 @@
 <!-- in template, div - {{ filterStore.location }} -->
 
 <template>
-    <div id="homeGrid">
-        <NavBar :buttonName="nameButton"></NavBar>
+    <div id="propertiesGrid">
+        <NavBar></NavBar>
         <HeroProperties id="hero"></HeroProperties>
-        <!-- <Search id="search"></Search>
-        <Exclusive id="exclusive"></Exclusive>
-        <SearchBy id="searchBy"></SearchBy>
-        <AboutUs id="aboutUs"></AboutUs>
-        <Testimonials id="testimonials"></Testimonials>
-        <Footer id="footer"></Footer> -->
+        <Search id="search"></Search>
+        <div id="propertiesList"></div>
+        <Footer id="footer"></Footer>
     </div>
-  </template>
+</template>
 
 <style scoped lang="scss">
   @use "../sass/base/reset";
   @use "../sass/base/colors";
   @use "../sass/base/typo";
-  @use "../sass/home/mainHome";
 
   #propertiesGrid {
     display: grid;
@@ -38,10 +34,14 @@
 
   #search {
       grid-area: search;
+      z-index: -5;
   }
 
   #propertiesList {
       grid-area: propertiesList;
+      height: 300px;
+      width: 100%;
+      border: 5px solid red;
   }
 
   #footer {
@@ -52,11 +52,13 @@
 
 <script>
 // import { searchFilters } from '../states/filters.js'
-import NavBar from "./globalComponents/NavBar.vue"
-import HeroProperties from './propertiesListComponents/HeroProperties.vue';
+import NavBar from './globalComponents/NavBar.vue'
+import HeroProperties from './propertiesListComponents/HeroProperties.vue'
+import Search from './propertiesListComponents/Search.vue'
+import Footer from './globalComponents/Footer.vue'
 
 export default {
-    components: {NavBar, HeroProperties},
+    components: {NavBar, HeroProperties, Search, Footer},
     setup() {
         // const filterStore = searchFilters()
 

@@ -19,16 +19,17 @@
 @use '../../sass/base/typo';
 
 .backgroundPhoto {
-    position: relative;
+    // position: relative;
 }
 .backgroundPhoto img {
-    position: fixed;
-    left: 50%;
+    // position: fixed;
+    position: relative;
+    // left: 50%;
     width: 100vw;
     min-width: 1360px;
     min-height: 150px;
     z-index: -1;
-    transform: translateX(-50%);
+    // transform: translateX(-50%);
 }
 .heroContent {
     position: absolute;
