@@ -3,28 +3,34 @@
         <div class="contentGrid">
             <div class="content">
                 <div class="sectionTitle">
-                    <h2>Search By</h2> 
-                    <hr class="line">
-                    <v-btn-toggle
+                    <div class="leftElements">
+                        <v-btn-toggle
                         v-model="text"
                         rounded="0"
                         color="deep-purple-accent-3"
                         group
                     >
-                        <v-btn value="type" class="toogle" id="selected" >
-                            TYPE
+                        <v-btn value="list" class="toogle" id="selected" >
+                            LIST
                         </v-btn>
-                        <v-btn value="location" class="toggle">
-                            LOCATION
+                        <v-btn value="map" class="toggle">
+                            MAP
                         </v-btn>
 
                     </v-btn-toggle>
+                    <p><span class="propertiesFoundNumber">5</span> properties found</p>
+                    </div>
+                    <buttonSelectNavi :buttonName="sortButton" id="sortButton"></buttonSelectNavi>
                 </div>
                 <div class="propertiesInfoSection">
-                    <propertySearchBy :SearchByElementTitle="titleName1"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName2"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName3"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName4"></propertySearchBy>
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
+                </div>
+                <div class="propertiesInfoSection">
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox></propertyInfoBox>
                 </div>
             </div>
         </div>
@@ -39,8 +45,7 @@
     @use '../../sass/base/typo';
 
     .background {
-        background-color: colors.$blue1;
-        height: 777px;
+        background-color: white;
         // width: 100vw;
     }
 
@@ -60,36 +65,43 @@
     .sectionTitle {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 0px;
         gap: 24px; 
-        margin-top: 84px;
         margin-bottom: 32px;
+    }
+
+    .leftElements {
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+    }
+
+    .leftElements p {
+        font-family: "Segoe UI" !important;
+        font-size: 1rem !important;
+        font-weight: 100 !important;
+        color: colors.$grey1;
     }
 
     h2 {
         font-weight: 100;
         color: white;
-    }
-
-    .line {
-        border-top: 1px solid colors.$grey1;
-        opacity: 0.4;
-        flex-grow: 1;
-    }
-
+    } 
     .propertiesInfoSection {
         display: flex;
         column-gap: 20px;
-        height: 565px;
+        margin-bottom: 20px;
     }
 
     .toggle {
         font-family: "Segoe UI" !important;
         font-size: 1rem !important;
         font-weight: 100 !important;
-        background-color: colors.$blue1;
+        background-color: white;
+        color: colors.$grey1;
+        opacity: 0.9;
     }
 
     button:first-child {
@@ -99,15 +111,20 @@
     }
 
     #selected {
-        background-color: white;
-        color: colors.$grey1;
-        opacity: 0.9;
+        background-color: colors.$blue1;
     }
 
     .v-btn-group .v-btn {
-        border: 1px solid #BCC4CD;
+        border: 1px solid colors.$blue1;
         opacity: 0.9;
     }
+
+    #sortButton {
+        filter: invert(1);
+        opacity: 0.6;
+        letter-spacing: 1px;
+    }
+
 
     
 </style>
@@ -115,21 +132,23 @@
 
 <script>
     // import child vue components
-    // import NavBar from './globalComponents/NavBar.vue'
+    import propertySearchBy from "../globalComponents/propertySearchBy.vue";
+    import buttonSelectNavi from "../globalComponents/buttonSelectNavi.vue";
+    import propertyInfoBox from "../globalComponents/propertyInfoBox.vue";
 
     // firebase settings
     import { collection, getDocs } from "firebase/firestore";
-    import propertySearchBy from "../globalComponents/propertySearchBy.vue";
 
     // import database connection from Firebase
     import db from "../../firebaseInit";
 
     export default {
-        components: {propertySearchBy},
+        components: {propertySearchBy, buttonSelectNavi, propertyInfoBox},
         data() {
             return {
                 // variables that will be used in HTML
                 properties: [],
+                sortButton: "SORT BY NEWEST",
                 titleName1: "Historical",
                 titleName2: "Houses",
                 titleName3: "Apartments",

@@ -111,7 +111,6 @@ import propertyTag from './propertyTag.vue';
 import saveButtonPropertyBox from './saveButtonPropertyBox.vue'
 
     export default {
-    name: "propertyInfoBox",
     props: {},
     data() {
         return {};

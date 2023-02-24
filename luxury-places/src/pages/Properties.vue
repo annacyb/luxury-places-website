@@ -6,7 +6,7 @@
         <NavBar></NavBar>
         <HeroProperties id="hero"></HeroProperties>
         <Search id="search"></Search>
-        <div id="propertiesList"></div>
+        <PropertiesList id="propertiesList"></PropertiesList>
         <Footer id="footer"></Footer>
     </div>
 </template>
@@ -39,9 +39,8 @@
 
   #propertiesList {
       grid-area: propertiesList;
-      height: 300px;
       width: 100%;
-      border: 5px solid red;
+      padding-bottom: 102px;
   }
 
   #footer {
@@ -53,12 +52,13 @@
 <script>
 // import { searchFilters } from '../states/filters.js'
 import NavBar from './globalComponents/NavBar.vue'
-import HeroProperties from './propertiesListComponents/HeroProperties.vue'
-import Search from './propertiesListComponents/Search.vue'
+import HeroProperties from './propertiesComponents/HeroProperties.vue'
+import Search from './propertiesComponents/Search.vue'
+import PropertiesList from './propertiesComponents/PropertiesList.vue'
 import Footer from './globalComponents/Footer.vue'
 
 export default {
-    components: {NavBar, HeroProperties, Search, Footer},
+    components: {NavBar, HeroProperties, Search, PropertiesList, Footer},
     setup() {
         // const filterStore = searchFilters()
 
