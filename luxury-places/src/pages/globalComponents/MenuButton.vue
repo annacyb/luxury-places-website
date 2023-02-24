@@ -20,7 +20,7 @@
         transition: all 150ms linear;
 
         width: 60px;
-        border: 1px solid white;
+        border: 1px solid #ffffff7d;
         // border-image: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
         // border-width: 1px;
         // border-style: solid;

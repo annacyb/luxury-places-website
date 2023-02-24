@@ -21,8 +21,6 @@
 
     .background {
         background-color: colors.$white;
-        // height: 645px;
-        // width: 100vw;
     }
 
     .contentGrid {
@@ -31,8 +29,6 @@
         gap: 0;
         grid-template-areas: 
         ". . content . ."  ;
-        // margin-left: auto;
-        // margin-right: auto;
 }
     .content {
         grid-area: content;

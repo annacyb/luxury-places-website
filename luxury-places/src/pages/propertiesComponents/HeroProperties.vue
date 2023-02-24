@@ -21,7 +21,7 @@
     width: 100vw;
     min-width: 1360px;
     min-height: 150px;
-    z-index: -1;
+    z-index: 1;
     // transform: translateX(-50%);
 }
 .heroContent {
@@ -48,10 +48,6 @@
     grid-area: content;
     border-left: solid 1px rgba(255, 255, 255, .6);
     padding-left: 48px;
-}
-
-.bottomContent h1 {
-    
 }
 
 </style>

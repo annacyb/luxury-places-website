@@ -6,7 +6,7 @@
         <div class="title">
             <h3>{{ SearchByElementTitle }}</h3>
         </div>
-        <div class="line">
+        <div>
             <hr class="line">
         </div>
         <buttonExplore></buttonExplore>
@@ -23,19 +23,29 @@
         width: 299px;
         cursor: pointer;
         height: fit-content;
+        border: none;
 
         &:hover {
-            transition: all 100ms linear;
+            transition: all 150ms linear;
             border-bottom: 1px solid white;
-            // color: colors.$gold3;
-            // background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
         }
         
         &:active {
-            transition: all 200ms linear;
+            transition: all 150ms linear;
             border-bottom: 1px solid white;
-            // background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.4) 100%);
         }
+
+        &:hover .line {
+            transition: all 150ms linear;
+            border-top: 1px solid white;
+            opacity: 0.8;
+        }
+
+        &:hover .imageWrapper {
+            transition: all 150ms linear;
+            box-shadow: 0px 5px 15px rgba(9, 22, 26, 0.4);
+        }
+
     }
 
     .imageWrapper {

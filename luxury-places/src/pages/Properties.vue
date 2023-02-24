@@ -29,12 +29,15 @@
   }
 
   #hero {
-      grid-area: hero;
+    grid-area: hero;
+    grid-area: hero;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
   }
 
   #search {
       grid-area: search;
-      z-index: -5;
   }
 
   #propertiesList {
