@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Home from "./pages/Home.vue";
 import Properties from "./pages/Properties.vue";
+import PropertyDetails from "./pages/PropertyDetails.vue";
 import NotFound from "./pages/NotFound.vue";
 
 
@@ -17,6 +18,12 @@ const routes = [
         name: "Properties",
         component: Properties,
         meta: {title: "Luxury Places - Properties"}
+    },
+    {
+        path: "/property/:id",
+        name: "Property",
+        component: PropertyDetails,
+        meta: {title: "Luxury Places - Property"}
     },
     // 404 page must be at the bottom of the routes list
     {
