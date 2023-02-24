@@ -1,4 +1,4 @@
-<!-- Cheching out if changing filters in search bar works on the other pages -->
+<!-- Checking out if changing filters in search bar works on the other pages -->
 <!-- in template, div - {{ filterStore.location }} -->
 
 <template>

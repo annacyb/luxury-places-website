@@ -4,7 +4,7 @@
         <div class="image-and-top-info">
           <div class="image-mask">
             <img
-              alt="property photo 1"
+              alt="property photo1"
               src="/images/propertyPhotos/property1/property1-1.jpg"
               class="image"
             />
