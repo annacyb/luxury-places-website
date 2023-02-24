@@ -69,7 +69,7 @@
         align-items: center;
         padding: 0px;
         gap: 24px; 
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
 
     .leftElements {

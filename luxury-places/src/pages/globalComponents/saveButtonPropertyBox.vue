@@ -1,8 +1,6 @@
 <template>
     <div class="iconWrapper">
-        <div class="heartIcon">
-            <img src="../../../public/icons/heartDark.svg" alt="heart icon" class="icon">
-        </div>
+        <div class="heartIcon"></div>
     </div>
 </template>
 
@@ -11,12 +9,6 @@
     @use "../../sass/base/colors";
     @use "../../sass/base/typo";
 
-    .icon {
-        // fill: black!important;
-        // color: red!important;
-        // stroke: red;
-        // filter: invert(1);
-    }
     .iconWrapper {
         display: flex;
         justify-content: center;
@@ -25,42 +17,37 @@
         cursor: pointer;
         user-select: none;
         transition: all 150ms linear;
-        border: 1px solid #BABABA;
+        border: 1px solid colors.$grey5;
         background-color: white;
         border-radius: 4px;
         opacity: 0.9;
         padding: 8px;
+        box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 5%);
 
         &:hover {
-            transition: all 200ms linear;
-            border: 1px solid colors.$gold1;
+            transition: all 100ms linear;
+            border: 1px solid colors.$gold3;
+            box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 15%);
         }
-        
-        &:active {
-            transition: all 200ms linear;
-            border: 1px solid colors.$gold1;
+
+        &:hover .heartIcon {
+            transition: all 100ms linear; 
+            background-image: url("../../../public/icons/heartDarkFilledGold.svg");
+        }
+
+        &:active .heartIcon {
+            opacity: 0.9;
         }
     }
     .heartIcon {
+        background-image: url("../../../public/icons/heartDark.svg");
         display: block;
         width: fit-content;
         background-color: none;
         border-radius: none;
         border: none;
-        // color: colors.$grey1;
         height: 24px;
         width: 24px;
-
-        &:hover {
-            transition: all 200ms linear;
-            filter: invert(1);
-        }
-        
-        &:active {
-            transition: all 200ms linear;
-            filter: invert(1);
-        }
-
     }
 
 </style>
