@@ -1,13 +1,6 @@
 <template>
     <div class="backgroundPhoto">
-        <img src="../../../public/images/heroPropertiesList.jpg" alt="background photo">
-        <!-- <div class="heroContent">
-            <div class="contentGrid">
-                <div class="bottomContent">
-                    <h1>Properties</h1> 
-                </div>
-            </div>
-        </div>  -->
+        <img src="/images/heroPropertiesList.jpg" alt="background photo">
     </div> 
 </template>
 

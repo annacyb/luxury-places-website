@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="imageWrapper">
-            <img src="../../../public/images/searchBy/location1.jpg" alt="location photo">
+            <img src="images/searchBy/location1.jpg" alt="location photo">
         </div>
         <div class="title">
             <h3>{{ SearchByElementTitle }}</h3>

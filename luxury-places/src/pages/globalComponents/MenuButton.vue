@@ -44,7 +44,7 @@
         border: none;
         
         color: white;
-        background: url("../../../public/icons/menuOpen.svg");
+        background: url("icons/menuOpen.svg");
         opacity: 0.9;
 
         height: 18.75px;

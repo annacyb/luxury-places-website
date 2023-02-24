@@ -32,7 +32,7 @@
 
         &:hover .heartIcon {
             transition: all 100ms linear; 
-            background-image: url("../../../public/icons/heartDarkFilledGold.svg");
+            background-image: url("/icons/heartDarkFilledGold.svg");
         }
 
         &:active .heartIcon {
@@ -40,7 +40,7 @@
         }
     }
     .heartIcon {
-        background-image: url("../../../public/icons/heartDark.svg");
+        background-image: url("/icons/heartDark.svg");
         display: block;
         width: fit-content;
         background-color: none;
