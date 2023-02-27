@@ -4,6 +4,7 @@
         <NavBar></NavBar>
         <HeroPropertyDetails id="hero"></HeroPropertyDetails>
         <DescriptionOverview></DescriptionOverview>
+        <PropertyDetailsSection></PropertyDetailsSection>
         <Footer id="footer"></Footer>
     </div>
 </template>
@@ -21,10 +22,11 @@
 import NavBar from './globalComponents/NavBar.vue'
 import HeroPropertyDetails from './propertyDetailsComponents/HeroPropertyDetails.vue'
 import DescriptionOverview from './propertyDetailsComponents/descriptionOverview.vue'
+import PropertyDetailsSection from './propertyDetailsComponents/propertyDetailsSection.vue'
 import Footer from './globalComponents/Footer.vue'
 
 export default {
-    components: {NavBar, HeroPropertyDetails, DescriptionOverview, Footer},
+    components: {NavBar, HeroPropertyDetails, DescriptionOverview, PropertyDetailsSection, Footer},
     setup() {
     },
     data() {
