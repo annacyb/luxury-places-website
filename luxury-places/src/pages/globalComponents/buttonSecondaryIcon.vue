@@ -1,5 +1,8 @@
 <template>
-    <div @click="testme()" class="buttonSecondary">{{ buttonName }}</div>
+    <div class="buttonSecondaryIcon">
+        <div class="icon"></div>
+       {{ buttonName }}
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -7,25 +10,23 @@
   @use "../../sass/base/colors";
   @use "../../sass/base/typo";
 
-    .buttonSecondary {
-        height: 48px;
+    .buttonSecondaryIcon {
+        height: 40px;
         width: fit-content;
-        padding-right: 20px;
-        padding-left: 20px;
         font-family: "Segoe UI";
-        font-size: 20px;
+        font-size: 16px;
         letter-spacing: 1px;
         color: colors.$grey1;
         background-color: none;
-        border-radius: 4px;
-        border: solid 1px rgb(22 22 22/ 0.6);
         white-space: nowrap;
         text-transform: uppercase;
+        opacity: 0.9;
 
         // to center horizontally and vertically
         display: flex;
         align-items: center;
         vertical-align: middle;
+        gap: 8px;
 
         cursor: pointer;
         user-select: none;
@@ -49,6 +50,17 @@
             opacity: 1;
             color: colors.$gold2;
             border: solid 1px colors.$gold2;
+        }
+
+        .icon {
+            background-image: url("/icons/shareIcon.svg");
+            display: block;
+            width: fit-content;
+            background-color: none;
+            border-radius: none;
+            border: none;
+            height: 20px;
+            width: 20px;
         }
     }
 

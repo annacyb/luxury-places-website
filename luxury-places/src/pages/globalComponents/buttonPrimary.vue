@@ -29,18 +29,15 @@
         cursor: pointer;
         user-select: none;
         transition: all 150ms linear;
-
-        // -webkit-appearance: none;
-        // -moz-appearance:    none;
-        // appearance:         none;
         
-        box-shadow: 1px 3px 10px rgb(0 0 0 / 0.2);
+        // box-shadow: 1px 3px 10px rgb(0 0 0 / 0.2);
 
         &:hover {
             transition: all 200ms linear;
-            color: colors.$grey1;
-            background-color: white;
+            // color: colors.$grey1;
+            background-color: colors.$gold2;
             opacity: 1;
+            // box-shadow: 1px 3px 10px rgb(0 0 0 / 0.2);
         }
         
         &:active {

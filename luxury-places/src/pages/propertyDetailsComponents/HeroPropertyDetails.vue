@@ -77,7 +77,7 @@
         width: 100vw;
         height: 75vh;
         display: flex;
-        opacity: 0.90;
+        opacity: 1;
         padding: 0;
         position: relative;
         align-self: stretch;
@@ -118,10 +118,10 @@
     }
 
     .bottomContent h1 {
-        padding-left: 48px;
+        padding-left: 40px;
     }
     .type-location-size {
-        padding-left: 48px;
+        padding-left: 40px;
         display: flex;
         position: relative;
         align-items: center;
@@ -146,7 +146,7 @@
     .textPrimaryDetails {
         color: white;
         height: auto;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         align-self: auto;
         text-align: left;
         font-family: "Segoe UI";
@@ -172,7 +172,7 @@
         opacity: 0.85;
         height: auto;
         align-items: center;
-        margin-right: 8px;
+        margin-right: 10px;
     }
     .toggle {
         font-family: "Segoe UI" !important;
