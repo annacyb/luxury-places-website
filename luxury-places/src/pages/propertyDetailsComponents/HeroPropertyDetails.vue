@@ -172,6 +172,7 @@
         opacity: 0.85;
         height: auto;
         align-items: center;
+        margin-right: 8px;
     }
     .toggle {
         font-family: "Segoe UI" !important;

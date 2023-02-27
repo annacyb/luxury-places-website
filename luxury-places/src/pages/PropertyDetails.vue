@@ -3,6 +3,7 @@
     <div id="propertiesGrid">
         <NavBar></NavBar>
         <HeroPropertyDetails id="hero"></HeroPropertyDetails>
+        <DescriptionOverview></DescriptionOverview>
         <Footer id="footer"></Footer>
     </div>
 </template>
@@ -19,10 +20,11 @@
 // import { searchFilters } from '../states/filters.js'
 import NavBar from './globalComponents/NavBar.vue'
 import HeroPropertyDetails from './propertyDetailsComponents/HeroPropertyDetails.vue'
+import DescriptionOverview from './propertyDetailsComponents/descriptionOverview.vue'
 import Footer from './globalComponents/Footer.vue'
 
 export default {
-    components: {NavBar, HeroPropertyDetails, Footer},
+    components: {NavBar, HeroPropertyDetails, DescriptionOverview, Footer},
     setup() {
     },
     data() {
