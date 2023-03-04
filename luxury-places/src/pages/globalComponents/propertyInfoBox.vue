@@ -11,7 +11,7 @@
           </div>
           <div class="top-elements">
             <div class="tagsWrapper">
-              <propertyTag tagName="EXCLUSIVE"></propertyTag>
+              <!-- <propertyTag tagName="EXCLUSIVE"></propertyTag> -->
               <propertyTag tagName="VIDEO"></propertyTag>
             </div>
             <saveButtonPropertyBox></saveButtonPropertyBox>
@@ -22,13 +22,13 @@
             <div class="price-and-description">
               <div class="priceWrapper">
                 <span class="price">
-                  <span>550 000 <span class="currency">CHF</span></span>
+                  <span>{{ pricePlace }}<span class="currency"> CHF</span></span>
                 </span>
               </div>
               <div class="descriptionWrapper">
                 <span class="description">
                   <span>
-                    Sleek and modern apartment offering easy access to the Geneva's top attractions.
+                    {{ titlePlace }}
                   </span>
                 </span>
               </div>
@@ -40,7 +40,7 @@
                   src="/icons/typeIcon.svg"
                   class="iconPrimaryDetails"
                 />
-                <span class="textPrimaryDetails">Apartment</span>
+                <span class="textPrimaryDetails">{{ typePlace }}</span>
               </div>
               <div class="primaryDetails">
                 <img
@@ -48,7 +48,7 @@
                   src="/icons/locationIcon.svg"
                   class="iconPrimaryDetails"
                 />
-                <span class="textPrimaryDetails">Geneva, Geneva</span>
+                <span class="textPrimaryDetails">{{ addressPlace }}</span>
               </div>
               <div class="primaryDetails">
                 <img
@@ -56,7 +56,7 @@
                   src="/icons/sizeIcon.svg"
                   class="iconPrimaryDetails"
                 />
-                <span class="textPrimaryDetails"><span class="size">160</span> m²</span>
+                <span class="textPrimaryDetails">{{ sizePlace }} m2</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@
                   src="/icons/dotIcon.svg"
                   class="dotIcon"
                 />
-                <span class="textSecondaryDetails"><span><span class="bedsNumber">5</span> Bedrooms</span></span>
+                <span class="textSecondaryDetails"><span><span class="bedsNumber">{{ bedsPlace }}</span> Bedrooms</span></span>
               </div>
               <div class="secondaryDetails">
                 <img
@@ -78,7 +78,7 @@
                   class="dotIcon"
                 />
                 <span class="textSecondaryDetails">
-                  <span><span class="bathsNumber">3</span> Bathrooms</span>
+                  <span><span class="bathsNumber">{{ bathsPlace }}</span> Bathrooms</span>
                 </span>
               </div>
               <div class="secondaryDetails">
@@ -87,7 +87,7 @@
                   src="/icons/dotIcon.svg"
                   class="dotIcon"
                 />
-                <span class="textSecondaryDetails"><span class="plotSize">68</span> m²</span>
+                <span class="textSecondaryDetails plotSize">{{ plotPlace }}</span>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ import propertyTag from './propertyTag.vue';
 import saveButtonPropertyBox from './saveButtonPropertyBox.vue';
 
     export default {
-    props: ['imageSource'],
+    props: ['imageSource', 'pricePlace', 'titlePlace', 'typePlace', 'addressPlace', 'sizePlace', 'bedsPlace', 'bathsPlace', 'plotPlace'],
     data() {
         return {};
     },

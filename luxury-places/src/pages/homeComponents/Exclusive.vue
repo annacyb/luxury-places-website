@@ -8,9 +8,19 @@
                     <buttonSecondary :buttonName="showAllButton"></buttonSecondary>
                 </div>
                 <div class="propertiesInfoSection">
-                    <propertyInfoBox imageSource="/images/propertyPhotos/property1-1.jpg"></propertyInfoBox>
-                    <propertyInfoBox imageSource="/images/propertyPhotos/property2-1.jpg"></propertyInfoBox>
-                    <propertyInfoBox imageSource="/images/propertyPhotos/property5-1.jpg"></propertyInfoBox>
+                    <div v-for="property in exclProperties">
+                        <propertyInfoBox 
+                            :imageSource="'/images/propertyPhotos/' + property.photo1" 
+                            :pricePlace="property.price"
+                            :titlePlace="property.title"
+                            :typePlace="property.type"
+                            :addressPlace="property.address"
+                            :sizePlace="property.size"
+                            :bedsPlace="property.beds"
+                            :bathsPlace="property.baths"
+                            :plotPlace="property.plot"
+                        ></propertyInfoBox>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,7 +88,7 @@
     import propertyInfoBox from "../globalComponents/propertyInfoBox.vue"
 
     // firebase settings
-    import { collection, getDocs } from "firebase/firestore";
+    import { collection, getDocs, query, where } from "firebase/firestore";
 
     // import database connection from Firebase
     import db from "../../firebaseInit";
@@ -88,27 +98,39 @@
         data() {
             return {
                 // variables that will be used in HTML
-                properties: [],
+                exclProperties: [],
                 showAllButton: "SHOW ALL"
             }
         },
 
         // after loading the page, JS runs this function first.
         created() {
-            this.getProperties()
+            this.getExclProperties();
         },
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            async getProperties() {
-                const queryProperties = await getDocs(collection(db, "properties"));
-                queryProperties.forEach((doc) => {
-                    this.properties.push(doc.data());
-                });
+            async getExclProperties() {
+                this.exclProperties = [
+                    await this.getTestProperty(1),
+                    await this.getTestProperty(2),
+                    await this.getTestProperty(5)
+                ]
             },
-        
-
-        }
+            async getTestProperty(propertyID) {
+                let propCollection = collection(db, 'properties')
+                let propQuery = query(propCollection, where('itemID', '==', propertyID))
+                let queryData = await getDocs(propQuery);
+                
+                let returnData = null
+                queryData.forEach((doc) => {
+                    // there is only one property in queryData, but firestore requires to iterate
+                    // this.testProperty = queryData[0].data()
+                    returnData = doc.data()
+                });
+                return returnData
+            }
+    }
     }
 </script>
 

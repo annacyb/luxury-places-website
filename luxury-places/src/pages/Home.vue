@@ -9,7 +9,7 @@
       <AboutUs id="aboutUs"></AboutUs>
       <Testimonials id="testimonials"></Testimonials>
       <Footer id="footer"></Footer>
-      {{ testProperty.outdoorAmenities.firePit }}
+      <!-- {{ testProperty.outdoorAmenities.firePit }} -->
   </div>
 </template>
 
