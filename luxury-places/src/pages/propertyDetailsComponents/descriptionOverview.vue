@@ -5,14 +5,14 @@
                 <div id="twoColumns">
                     <div id="leftColumn">
                         <div id="titleText">
-                            <h2>Sleek and modern apartment offering easy access to the Geneva's top attractions.</h2>
+                            <h2>{{ property.title }}</h2>
                         </div>
                         <div id="overviewButtons">
                             <buttonSecondaryIcon :buttonName="saveButton"></buttonSecondaryIcon>
                             <buttonSecondaryIcon :buttonName="shareButton"></buttonSecondaryIcon>
                             <buttonSecondaryIcon :buttonName="printButton"></buttonSecondaryIcon>
                             <div class="line2"></div>
-                            <p>Ref: <span class="refNumber">#4075481</span></p>
+                            <p>Ref: <span class="refNumber">{{ property.ref }}</span></p>
                         </div>
                         <div id="overviewTextWrapper">
                             <div id="overviewTitle">
@@ -21,9 +21,9 @@
                             </div>
                             <div id="overviewText">
                                 <p>
-                                Experience luxury living in the heart of Geneva with this stunning modern apartment in the prestigious Champel district. Built in 2022, this 2-stories 160m2 property boasts 5 spacious bedrooms, 3 sleek bathrooms and a fully furnished interior, perfect for those seeking comfortable and stylish living. 
-
-                                The modern design of the property is truly impressive, featuring a cinema room and a 20m2  walk in closet. In the property you can unwind in the private sauna or a by swimming in an outdoor heated pool after a long day. Moreover, a truly unique feature of this luxurious apartment is 22m2 outdoor terrace surronded by a beautiful garden.
+                                    {{ property.descriptionPart1 }} 
+                                    {{ property.descriptionPart2 }} 
+                                    {{ property.descriptionPart3 }} 
                                 </p>
                             </div>
                             <div class="showMore">
@@ -35,11 +35,11 @@
                         <div id="contactAgentBox">
                             <div class="agentInfo">
                                 <div id="contactLeftcolumn">
-                                    <img src="/images/agentsPhotos/agent1.jpg" alt="">
+                                    <img :src="'/images/agentsPhotos/' + property.agentsPhoto" alt="agent photo">
                                 </div>
                                 <div id="contactRightcolumn">
-                                    <p><span class="agentName">Emma Weber</span></p>
-                                    <p><span class="agentPhone">+41 786 39 26 57</span></p>
+                                    <p><span class="agentName">{{ property.agent }} </span></p>
+                                    <p><span class="agentPhone">{{ property.agentsPhone }}</span></p>
                                 </div>
                             </div>
                             <div class="buttonsPart">
@@ -55,13 +55,13 @@
                 </div>
                 <div class="photos">
                     <div class="secondaryPhoto">
-                        <img src="/images/propertyPhotos/property1/property1-2.jpg" alt="">
+                        <img src="/images/propertyPhotos/property1/property1-2.jpg" alt="photo2">
                     </div>
                     <div class="secondaryPhoto">
-                        <img src="/images/propertyPhotos/property1/property1-3.jpg" alt="">
+                        <img src="/images/propertyPhotos/property1/property1-3.jpg" alt="photo3">
                     </div>
                     <div class="secondaryPhoto">
-                        <img src="/images/propertyPhotos/property1/property1-4.jpg" alt="">
+                        <img src="/images/propertyPhotos/property1/property1-4.jpg" alt="photo4">
                     </div>
                 </div>
             </div>
@@ -252,29 +252,51 @@
 
 
 <script>
-// import child vue components
-import buttonPrimary from "../globalComponents/buttonPrimary.vue"
-import buttonSecondary from "../globalComponents/buttonSecondary.vue"
-import buttonSecondaryIcon from "../globalComponents/buttonSecondaryIcon.vue"
 
-export default {
-    components: {buttonPrimary, buttonSecondary, buttonSecondaryIcon},
-    data() {
-        return {
-            // variables that will be used in HTML
-            saveButton: "save",
-            shareButton: "share",
-            printButton: "print"
+    // firebase settings
+    import { collection, getDocs, query, where } from "firebase/firestore";
+
+    // import database connection from Firebase
+    import db from "../../firebaseInit";
+
+    // import child vue components
+    import buttonPrimary from "../globalComponents/buttonPrimary.vue"
+    import buttonSecondary from "../globalComponents/buttonSecondary.vue"
+    import buttonSecondaryIcon from "../globalComponents/buttonSecondaryIcon.vue"
+
+    export default {
+        components: {buttonPrimary, buttonSecondary, buttonSecondaryIcon},
+        props: ['propertyID'],
+        data() {
+            return {
+                // variables that will be used in HTML 
+                property: {},
+                saveButton: "save",
+                shareButton: "share",
+                printButton: "print"
+            }
+        },
+
+        // after loading the page, JS runs this function first.
+        async created() {
+            this.property = await this.getProperty(this.propertyID);
+        },
+
+        // JS functions that I will be using for changing variables in data()
+        methods: {
+            async getProperty(propertyID) {
+                let propCollection = collection(db, 'properties')
+                let propQuery = query(propCollection, where('itemID', '==', parseInt(propertyID)))
+                let queryData = await getDocs(propQuery);
+
+                let returnData = null
+                queryData.forEach((doc) => {
+                    // there is only one property in queryData, but firestore requires to iterate
+                    // this.testProperty = queryData[0].data()
+                    returnData = doc.data()
+                });
+                return returnData 
+            }
         }
-    },
-
-    // after loading the page, JS runs this function first.
-    created() {
-    },
-
-    // JS functions that I will be using for changing variables in data()
-    methods: {
-
     }
-}
 </script>

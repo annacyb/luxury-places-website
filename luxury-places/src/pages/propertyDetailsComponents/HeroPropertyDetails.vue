@@ -5,7 +5,7 @@
 
             <div class="contentGrid">
                 <div class="bottomContent">
-                    <h1><span class="price">{{ property.price }}</span> CHF</h1> 
+                    <h1><span class="price">{{ property.price }}</span></h1> 
                     <div class="type-location-size">
                         <div class="primaryDetails">
                             <img

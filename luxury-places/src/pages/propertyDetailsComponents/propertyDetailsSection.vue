@@ -11,103 +11,99 @@
                             <div class="general-info-wrapper">
                                 <div class="general-info-title">
                                 <img
-                                    src=""
-                                    alt=""
-                                    class=""
+                                    src="/icons/listGold.svg"
+                                    alt="icon"
+                                    class="columnIcon"
                                 />
                                 <span class="frame2608506-text"><span>General Info</span></span>
                                 </div>
-                                <img
-                                src=""
-                                alt=""
-                                class="gold-line"
-                                />
+                                <div class="GOLDLINE"></div>
                                 <div class="general-info-details">
                                     <div class="general1">
                                         <div class="frame2608506-frame2608339">
-                                        <span class="frame2608506-text002"><span>Status:</span></span>
+                                            <span class="frame2608506-text002"><span>Status:</span></span>
                                         </div>
                                         <div class="status">
-                                        <span class="frame2608506-text004"><span>Available</span></span>
+                                            <span class="frame2608506-text004"><span v-if="property && property.generalInfo">{{ property.generalInfo.status }}</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="general1">
+                                        <div class="frame2608506-frame260833901">
+                                            <span class="frame2608506-text006">
+                                                <span>Property type:</span>
+                                            </span>
+                                        </div>
+                                        <div class="type">
+                                            <span class="frame2608506-text008"><span> {{ property.type }}</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="general1">
+                                        <div class="frame2608506-frame260833902">
+                                            <div class="frame2608506-frame2608213">
+                                                <span class="frame2608506-text010">
+                                                    <span>Year built:</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="year-bulid">
+                                            <span class="frame2608506-text012"><span v-if="property && property.generalInfo">{{ property.generalInfo.yearBuild }}</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="general1">
+                                        <div class="frame2608506-frame260833903">
+                                            <div class="frame2608506-frame260821301">
+                                                <span class="frame2608506-text014">
+                                                    <span>Style:</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="style">
+                                            <span class="frame2608506-text016"><span v-if="property && property.generalInfo">{{ property.generalInfo.style }}</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="general1">
+                                        <div class="frame2608506-frame260833904">
+                                            <div class="frame2608506-frame260821302">
+                                                <span class="frame2608506-text018">
+                                                    <span>Furnished:</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="furnished">
+                                            <span class="frame2608506-text020"><span>Yes</span></span>
                                         </div>
                                     </div>
                                     <div class="general2">
-                                        <div class="frame2608506-frame260833901">
-                                        <span class="frame2608506-text006">
-                                            <span>Property type:</span>
-                                        </span>
-                                        </div>
-                                        <div class="type">
-                                        <span class="frame2608506-text008"><span>Apartment</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="general3">
-                                        <div class="frame2608506-frame260833902">
-                                        <div class="frame2608506-frame2608213">
-                                            <span class="frame2608506-text010">
-                                            <span>Year built:</span>
-                                            </span>
-                                        </div>
-                                        </div>
-                                        <div class="year-bulid">
-                                        <span class="frame2608506-text012"><span>2022</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="general4">
-                                        <div class="frame2608506-frame260833903">
-                                        <div class="frame2608506-frame260821301">
-                                            <span class="frame2608506-text014">
-                                            <span>Property style:</span>
-                                            </span>
-                                        </div>
-                                        </div>
-                                        <div class="style">
-                                        <span class="frame2608506-text016"><span>Modern</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="general5">
-                                        <div class="frame2608506-frame260833904">
-                                        <div class="frame2608506-frame260821302">
-                                            <span class="frame2608506-text018">
-                                            <span>Furnished:</span>
-                                            </span>
-                                        </div>
-                                        </div>
-                                        <div class="furnished">
-                                        <span class="frame2608506-text020"><span>Yes</span></span>
-                                        </div>
-                                    </div>
-                                    <div class="general6">
                                         <div class="frame2608506-frame2608451">
-                                        <div class="frame2608506-frame260833905">
-                                            <div class="frame2608506-frame260821303">
-                                            <span class="frame2608506-text022">
-                                                <span>Location:</span>
-                                            </span>
+                                            <div class="frame2608506-frame260833905">
+                                                <div class="frame2608506-frame260821303">
+                                                    <span class="frame2608506-text022">
+                                                        <span>Location:</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="location">
+                                                <span class="frame2608506-text024">
+                                                    <span>{{ property.address }}</span>
+                                                </span>
                                             </div>
                                         </div>
-                                        <div class="location">
-                                            <span class="frame2608506-text024">
-                                            <span>Champel district,</span>
+                                        <!-- <div class="frame2608506-frame260821304">
+                                            <span class="frame2608506-text026">
+                                                <span>Geneva, Switzerland</span>
                                             </span>
-                                        </div>
-                                        </div>
-                                        <div class="frame2608506-frame260821304">
-                                        <span class="frame2608506-text026">
-                                            <span>Geneva, Switzerland</span>
-                                        </span>
-                                        </div>
+                                        </div> -->
                                     </div>
-                                    <div class="general7">
+                                    <div class="general1">
                                         <div class="frame2608506-frame260833906">
-                                        <div class="frame2608506-frame260821305">
-                                            <span class="frame2608506-text028">
-                                            <span>Ski resort:</span>
-                                            </span>
-                                        </div>
+                                            <div class="frame2608506-frame260821305">
+                                                <span class="frame2608506-text028">
+                                                    <span>Ski resort:</span>
+                                                </span>
+                                            </div>
                                         </div>
                                         <div class="ski-resort">
-                                        <span class="frame2608506-text030"><span>168km away</span></span>
+                                            <span class="frame2608506-text030"><span v-if="property && property.generalInfo">{{ property.generalInfo.skiResort }}</span>km away</span>
                                         </div>
                                     </div>
                                     </div>
@@ -115,19 +111,15 @@
                             <div class="indoor-amenities-wrapper">
                                     <div class="indoor-amenities-title">
                                     <img
-                                        src=""
-                                        alt=""
-                                        class=""
+                                        src="/icons/houseGold.svg"
+                                        alt="icon"
+                                        class="columnIcon"
                                     />
                                     <span class="frame2608506-text032">
                                         <span>Indoor Amenities</span>
                                     </span>
                                     </div>
-                                    <img
-                                    src=""
-                                    alt=""
-                                    class="frame2608506-gold-line1"
-                                    />
+                                    <div class="GOLDLINE"></div>
                                     <div class="indoor-amenities-details">
                                     <div class="indoor1">
                                         <div class="frame2608506-frame260833907">
@@ -138,10 +130,10 @@
                                         </div>
                                         </div>
                                         <div class="size">
-                                        <span class="frame2608506-text036"><span>160m2</span></span>
+                                        <span class="frame2608506-text036"><span>{{ property.size }}</span>m2</span>
                                         </div>
                                     </div>
-                                    <div class="indoor2">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833908">
                                         <div class="frame2608506-frame260821307">
                                             <span class="frame2608506-text038">
@@ -150,40 +142,40 @@
                                         </div>
                                         </div>
                                         <div class="terrace">
-                                        <span class="frame2608506-text040"><span>22m2</span></span>
+                                        <span class="frame2608506-text040"><span v-if="property && property.indoorAmenities">{{ property.indoorAmenities.terrace }}</span>m2</span>
                                         </div>
                                     </div>
-                                    <div class="indoor3">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833909">
                                         <div class="frame2608506-frame260821308">
                                             <span class="frame2608506-text042"><span>Stories:</span></span>
                                         </div>
                                         </div>
                                         <div class="stories">
-                                        <span class="frame2608506-text044">2</span>
+                                        <span class="frame2608506-text044" v-if="property && property.indoorAmenities">{{ property.indoorAmenities.stories }}</span>
                                         </div>
                                     </div>
-                                    <div class="indoor4">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833910">
                                         <div class="frame2608506-frame260821309">
                                             <span class="frame2608506-text045"><span>Floor:</span></span>
                                         </div>
                                         </div>
                                         <div class="floor">
-                                        <span class="frame2608506-text047"><span>1&amp;2</span></span>
+                                        <span class="frame2608506-text047"><span v-if="property && property.indoorAmenities">{{ property.indoorAmenities.floor }}</span></span>
                                         </div>
                                     </div>
-                                    <div class="indoor5">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833911">
                                         <div class="frame2608506-frame260821310">
                                             <span class="frame2608506-text049"><span>Bedrooms:</span></span>
                                         </div>
                                         </div>
                                         <div class="beds">
-                                        <span class="frame2608506-text051">5</span>
+                                        <span class="frame2608506-text051">{{ property.beds }}</span>
                                         </div>
                                     </div>
-                                    <div class="indoor6">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833912">
                                         <div class="frame2608506-frame260821311">
                                             <span class="frame2608506-text052">
@@ -192,10 +184,10 @@
                                         </div>
                                         </div>
                                         <div class="baths">
-                                        <span class="frame2608506-text054">3</span>
+                                        <span class="frame2608506-text054">{{ property.baths }}</span>
                                         </div>
                                     </div>
-                                    <div class="indoor7">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833913">
                                         <div class="frame2608506-frame260821312">
                                             <span class="frame2608506-text055">
@@ -207,14 +199,14 @@
                                         <span class="frame2608506-text057"><span>No</span></span>
                                         </div>
                                     </div>
-                                    <div class="indoor8">
+                                    <div class="indoor1">
                                         <div class="frame2608506-frame260833914">
                                         <div class="frame2608506-frame260821313">
                                             <span class="frame2608506-text059"><span>Elevator:</span></span>
                                         </div>
                                         </div>
                                         <div class="elevator">
-                                        <span class="frame2608506-text061"><span>Yes</span></span>
+                                        <span class="frame2608506-text061"><span>No</span></span>
                                         </div>
                                     </div>
                                     </div>
@@ -222,19 +214,15 @@
                             <div class="outdoor-amenities-wrapper">
                                     <div class="outdoor-amenities-title">
                                     <img
-                                    src=""
-                                    alt=""
-                                    class=""
+                                    src="/icons/treeGold.svg"
+                                    alt="icon"
+                                    class="columnIcon"
                                     />
                                     <span class="frame2608506-text063">
                                         <span>Outdoor Amenities</span>
                                     </span>
                                     </div>
-                                    <img
-                                    src=""
-                                    alt=""
-                                    class=""
-                                    />
+                                    <div class="GOLDLINE"></div>
                                     <div class="outdoor-amenities-details">
                                         <div class="outdoor1">
                                             <div class="frame2608506-frame260833915">
@@ -248,7 +236,7 @@
                                             <span class="frame2608506-text067"><span>68m2</span></span>
                                             </div>
                                         </div>
-                                        <div class="outdoor2">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833916">
                                             <div class="frame2608506-frame260821315">
                                                 <span class="frame2608506-text069">
@@ -260,7 +248,7 @@
                                             <span class="frame2608506-text071">2</span>
                                             </div>
                                         </div>
-                                        <div class="outdoor3">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833917">
                                             <div class="frame2608506-frame260821316">
                                             <span class="frame2608506-text072"><span>Garden:</span></span>
@@ -270,7 +258,7 @@
                                             <span class="frame2608506-text074"><span>Yes</span></span>
                                             </div>
                                         </div>
-                                        <div class="outdoor4">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833918">
                                             <div class="frame2608506-frame260821317">
                                                 <span class="frame2608506-text076">
@@ -282,7 +270,7 @@
                                             <span class="frame2608506-text078"><span>Yes</span></span>
                                             </div>
                                         </div>
-                                        <div class="outdoor5">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833919">
                                             <div class="frame2608506-frame260821318">
                                                 <span class="frame2608506-text080">
@@ -294,7 +282,7 @@
                                             <span class="frame2608506-text082"><span>No</span></span>
                                             </div>
                                         </div>
-                                        <div class="outdoor6">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833920">
                                             <div class="frame2608506-frame260821319">
                                                 <span class="frame2608506-text084">
@@ -306,7 +294,7 @@
                                             <span class="frame2608506-text086"><span>No</span></span>
                                             </div>
                                         </div>
-                                        <div class="outdoor7">
+                                        <div class="outdoor1">
                                             <div class="frame2608506-frame260833921">
                                             <div class="frame2608506-frame260821320">
                                                 <span class="frame2608506-text088"><span>Fire Pit:</span></span>
@@ -324,20 +312,16 @@
                                     <div class="luxury-features-title">
                                         <div class="frame2608506-frame2608454">
                                             <img
-                                            src=""
-                                            alt=""
-                                            class=""
+                                            src="/icons/starGold.svg"
+                                            alt="icon"
+                                            class="columnIcon"
                                             />
                                             <span class="frame2608506-text092">
                                                 <span>Luxury Features</span>
                                             </span>
                                         </div>
                                         <div class="frame2608506-frame78">
-                                            <img
-                                            src=""
-                                            alt=""
-                                            class="gold-line3"
-                                            />
+                                            <div class="GOLDLINE"></div>
                                         </div>
                                     </div>
                                     <div class="luxury-features-details">
@@ -485,7 +469,42 @@
   
 
   <script>
+
+  // firebase settings
+  import { collection, getDocs, query, where } from "firebase/firestore";
+
+  // import database connection from Firebase
+  import db from "../../firebaseInit";
+
   export default {
-    props: {},
+      props: ['propertyID'],
+      data() {
+          return {
+              // variables that will be used in HTML 
+              property: {}
+          }
+      },
+
+      // after loading the page, JS runs this function first.
+      async created() {
+          this.property = await this.getProperty(this.propertyID);
+      },
+
+      // JS functions that I will be using for changing variables in data()
+      methods: {
+          async getProperty(propertyID) {
+              let propCollection = collection(db, 'properties')
+              let propQuery = query(propCollection, where('itemID', '==', parseInt(propertyID)))
+              let queryData = await getDocs(propQuery);
+
+              let returnData = null
+              queryData.forEach((doc) => {
+                  // there is only one property in queryData, but firestore requires to iterate
+                  // this.testProperty = queryData[0].data()
+                  returnData = doc.data()
+              });
+              return returnData 
+          }
+      }
   }
-  </script>
+</script>

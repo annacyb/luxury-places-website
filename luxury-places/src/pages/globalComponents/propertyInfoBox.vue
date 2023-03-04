@@ -22,7 +22,7 @@
           <div class="price-and-description">
             <div class="priceWrapper">
               <span class="price">
-                <span>{{ pricePlace }}<span class="currency"> CHF</span></span>
+                <span>{{ pricePlace }}<span class="currency"></span></span>
               </span>
             </div>
             <div class="descriptionWrapper">

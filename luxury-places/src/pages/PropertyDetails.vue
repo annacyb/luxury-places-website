@@ -3,8 +3,8 @@
     <div id="propertiesGrid">
         <NavBar></NavBar>
         <HeroPropertyDetails id="hero" :propertyID="propid"></HeroPropertyDetails>
-        <DescriptionOverview></DescriptionOverview>
-        <PropertyDetailsSection></PropertyDetailsSection>
+        <DescriptionOverview :propertyID="propid"></DescriptionOverview>
+        <PropertyDetailsSection :propertyID="propid"></PropertyDetailsSection>
         <Footer id="footer"></Footer>
     </div>
 </template>
