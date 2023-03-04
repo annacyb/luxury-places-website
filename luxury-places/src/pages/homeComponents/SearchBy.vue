@@ -21,10 +21,10 @@
                     </v-btn-toggle>
                 </div>
                 <div class="propertiesInfoSection">
-                    <propertySearchBy :SearchByElementTitle="titleName1"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName2"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName3"></propertySearchBy>
-                    <propertySearchBy :SearchByElementTitle="titleName4"></propertySearchBy>
+                    <propertySearchBy :SearchByElementTitle="titleName1" imageSource="images/searchBy/location1.jpg"></propertySearchBy>
+                    <propertySearchBy :SearchByElementTitle="titleName2" imageSource="images/searchBy/location2.jpg"></propertySearchBy>
+                    <propertySearchBy :SearchByElementTitle="titleName3" imageSource="images/searchBy/location3.jpg"></propertySearchBy>
+                    <propertySearchBy :SearchByElementTitle="titleName4" imageSource="images/searchBy/location4.jpg"></propertySearchBy>
                 </div>
             </div>
         </div>

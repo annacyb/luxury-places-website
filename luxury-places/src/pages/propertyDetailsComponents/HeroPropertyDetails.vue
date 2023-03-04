@@ -1,7 +1,7 @@
 <template>
     <div class="heroGrid">
         <div class="photoWrapper">
-            <img src="/images/propertyPhotos/property1/property1-1.jpg" alt="background photo" class="backgroundPhoto">
+            <img src="/images/propertyPhotos/property1-1.jpg" alt="background photo" class="backgroundPhoto">
 
             <div class="contentGrid">
                 <div class="bottomContent">

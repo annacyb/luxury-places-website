@@ -8,9 +8,9 @@
                     <buttonSecondary :buttonName="showAllButton"></buttonSecondary>
                 </div>
                 <div class="propertiesInfoSection">
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
+                    <propertyInfoBox imageSource="/images/propertyPhotos/property1-1.jpg"></propertyInfoBox>
+                    <propertyInfoBox imageSource="/images/propertyPhotos/property2-1.jpg"></propertyInfoBox>
+                    <propertyInfoBox imageSource="/images/propertyPhotos/property5-1.jpg"></propertyInfoBox>
                 </div>
             </div>
         </div>

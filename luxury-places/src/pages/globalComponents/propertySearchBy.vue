@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="imageWrapper">
-            <img src="images/searchBy/location1.jpg" alt="location photo">
+            <img :src="imageSource" alt="location photo">
         </div>
         <div class="title">
             <h3>{{ SearchByElementTitle }}</h3>
@@ -97,7 +97,7 @@
 
     export default {
         components: {buttonExplore},
-        props: ['SearchByElementTitle'],
+        props: ['SearchByElementTitle', 'imageSource'],
         data() {
             return {
                 // variables that will be used in HTML

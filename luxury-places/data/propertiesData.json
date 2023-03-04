@@ -2,22 +2,24 @@
     "data": [
         {
             "id": 1,
-            "name": "Property1",
+            "name": "property1",
             "ref": "#4075481",
-            "aim": "sale",
-            "price": 2500000,
-            "type": "apartment",
-            "location": "city center, urban",
+            "aim": "Sale",
+            "price": "2'500'000",
+            "type": "Apartment",
+            "location": "City Center, Urban",
             "address": "Geneva, Geneva",
             "addressDetails": "Rte de Florissant, 1206 Geneva, CH",
             "size": 160,
             "beds": 5,
             "baths": 3,
-            "plot": 68,
+            "plot": "478 m2",
+            "tag": "exclusive, video",
         
             "agent": "Emma Weber",
             "agentsPhone": "+41 78 639 26 52",
             "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
         
             "photo1": "property1-1.jpg",
             "photo2": "property1-2.jpg",
@@ -31,7 +33,7 @@
             "descriptionPart4" : "Located in one of Geneva's most desirable neighborhoods, this apartment offers the best of both worlds with its combination of luxury and convenience. Don't miss this opportunity to own this magnificent apartment and enjoy its numerous luxurious features.",
         
             "generalInfo": {
-                "status": "available",
+                "status": "available, for sale",
                 "yearBuild": 2022,
                 "style": "Modern, Minimalist",
                 "furnished": true,
@@ -72,22 +74,24 @@
 
         {
             "id": 2,
-            "name": "Property2",
+            "name": "property2",
             "ref": "#4075522",
-            "aim": "rent",
-            "price": 160000,
-            "type": "apartment",
-            "location": "city center, urban",
+            "aim": "Rent",
+            "price": "160'000",
+            "type": "Apartment",
+            "location": "City Center, Urban",
             "address": "Zurich, Zurich",
             "addressDetails": "Klarastrasse, 8008 Zurich, CH",
             "size": 142,
             "beds": 3,
             "baths": 3,
-            "plot": "",
+            "plot": "-",
+            "tag": "exclusive, video",
         
             "agent": "Oliver Baumann",
             "agentsPhone": "+41 78 639 45 83",
             "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
         
             "photo1": "property2-1.jpg",
             "photo2": "property2-2.jpg",
@@ -101,7 +105,7 @@
             "descriptionPart4" : "At a price of 750000 CHF, this apartment is a rare find in one of Zurich's most desirable neighborhoods. Don't miss your chance to own this exquisite home and experience the best that city living has to offer. Contact us today to schedule a viewing! .",
         
             "generalInfo": {
-                "status": "available",
+                "status": "available, for rent",
                 "yearBuild": 2020,
                 "style": "Modern, Art Deco",
                 "furnished": true,
@@ -140,8 +144,644 @@
             "areaDescription": "Experience the ultimate in luxury living in Zurich's prestigious Seefeld district. Immerse yourself in sophistication with its elegant tree-lined streets, designer boutiques, and world-class dining options. Enjoy the tranquility of lakeside living, all in one of the city's most desirable locations. Plus, with its close proximity to Zurich's dynamic city center and thriving nightlife, residents can enjoy the best of both worlds - a serene sanctuary to call home and the excitement of the urban scene just moments away."
         },
 
-        {},
+        {
+            "id": 3,
+            "name": "property3",
+            "ref": "#4075443",
+            "aim": "Sale",
+            "price": "PRICE ON REQUEST",
+            "type": "Historical",
+            "location": "Urban, Lakeside",
+            "address": "Uster, Zurich",
+            "addressDetails": "Uster, Zurich, CH",
+            "size": 824,
+            "beds": 15,
+            "baths": 9,
+            "plot": "10 ha",
+            "tag": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
+        
+            "photo1": "property3-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Spacious luxury villa from XVII century with a panoramic view on the lake.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 1928,
+                "style": "Classical",
+                "furnished": true,
+                "skiResort": 112
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 5,
+                "floor": "1-5",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 15,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": true,
+                "tennisCourt": true,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "lake view", "tennis court", "outdoor pool", "cinema room", "sauna", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
 
-        {}
+        {
+            "id": 4,
+            "name": "property4",
+            "ref": "#4075444",
+            "aim": "rent",
+            "price": "PRICE UPON REQUEST",
+            "type": "Apartment",
+            "location": "Urban, Lakeside",
+            "address": "Montreux, Zurich",
+            "addressDetails": "Montreux, Zurich, CH",
+            "size": 320,
+            "beds": 5,
+            "baths": 4,
+            "plot": "1,5 ha",
+            "tag": "exclusive, virtual tour",
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
+        
+            "photo1": "property4-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Exceptional property in Montreux, located lakeside, with a private dock.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 2017,
+                "style": "Modern",
+                "furnished": false,
+                "skiResort": 39
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 1,
+                "floor": "1",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 3,
+                "garden": true,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Fitness Room", "Lake View", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 5,
+            "name": "property5",
+            "ref": "#4075445",
+            "aim": "Sale",
+            "price": "2'700'000",
+            "type": "House",
+            "location": "Rural",
+            "address": "Sursee, Lucerne",
+            "addressDetails": "Sursee, Lucerne, CH",
+            "size": 280,
+            "beds": 5,
+            "baths": 3,
+            "plot": "0.85 ha",
+            "tag": "exclusive, video",
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
+        
+            "photo1": "property5-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Sustainable house in a minimalist style  in nature with an outdoor pool and garden.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 2015,
+                "style": "Modern, Minimalistic",
+                "furnished": true,
+                "skiResort": 55
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 3,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "outdoor pool", "terrace", "cinema room", "sauna", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 6,
+            "name": "property6",
+            "ref": "#4075446",
+            "aim": "Rent",
+            "price": "PRICE UPON REQUEST",
+            "type": "House",
+            "location": "Rural",
+            "address": "Magadino, Ticino",
+            "addressDetails": "Magadino, Ticino, CH",
+            "size": 305,
+            "beds": 7,
+            "baths": 5,
+            "plot": "0.5 ha",
+            "tag": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
+        
+            "photo1": "property6-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Traditional house with a touch of modern extravagance close to Lago Maggiore lake.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 1996,
+                "style": "Traditional",
+                "furnished": true,
+                "skiResort": 157
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 2,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": true,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "terrace", "outdoor pool", "outdoor kitchen", "garden", "sauna", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 7,
+            "name": "property7",
+            "ref": "#4075447",
+            "aim": "Sale",
+            "price": "PRICE UPON REQUEST",
+            "type": "Historical",
+            "location": "Rural",
+            "address": "Laufen, Bazylea",
+            "addressDetails": "Laufen, Bazylea, CH",
+            "size": 478,
+            "beds": 8,
+            "baths": 6,
+            "plot": "2,15 ha",
+            "tag": "",
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
+        
+            "photo1": "property7-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Charming property from XIX century surrounded by magnificent garden.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 1917,
+                "style": "Traditional",
+                "furnished": false,
+                "skiResort": 136
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 4,
+                "floor": "1-4",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 2,
+                "garden": true,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Garden", "Terrace", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 8,
+            "name": "property8",
+            "ref": "#4075448",
+            "aim": "Rent",
+            "price": "140'000",
+            "type": "House",
+            "location": "Ski Resort, Rural",
+            "address": "Lax, Valais",
+            "addressDetails": "Lax, Valais, CH",
+            "size": 324,
+            "beds": 7,
+            "baths": 6,
+            "plot": "475 m2",
+            "tag": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
+        
+            "photo1": "property8-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Cosy house near Aletsch Arena Ski Resort, featuring private spa amenities.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 1992,
+                "style": "Traditional",
+                "furnished": true,
+                "skiResort": 2
+            },
+        
+            "indoorAmenities": {
+                "terrace": false,
+                "stories": 3,
+                "floor": "1-3",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 4,
+                "garden": true,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Mountain View", "Sauna", "Garden" 
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 9,
+            "name": "property9",
+            "ref": "#4075449",
+            "aim": "Sale",
+            "price": "PRICE UPON REQUEST",
+            "type": "House",
+            "location": "Rural",
+            "address": "Lugano, Ticino",
+            "addressDetails": "Lugano, Ticino, CH",
+            "size": 223,
+            "beds": 6,
+            "baths": 6,
+            "plot": "0,3 ha",
+            "tag": "Video, virtual tour",
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
+        
+            "photo1": "property9-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Self-sufficient house designed by a famous architect in a harmonious neighborhood.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 2022,
+                "style": "Modern",
+                "furnished": true,
+                "skiResort": 115
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": true,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 4,
+                "garden": true,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Eco-friendly", "Terrace", "Garden", "Fitness Room", "Indoor Pool", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 10,
+            "name": "property10",
+            "ref": "#4075450",
+            "aim": "Rent",
+            "price": "PRICE UPON REQUEST",
+            "type": "House",
+            "location": "Urban, Lakeside",
+            "address": "Wisen, Solura",
+            "addressDetails": "Wisen, Solura, CH",
+            "size": 192,
+            "beds": 4,
+            "baths": 4,
+            "plot": "0,45 ha",
+            "tag": "",
+        
+            "agent": "Emma Weber",
+            "agentsPhone": "+41 78 639 26 52",
+            "agentsPhoto": "agent1.jpg",
+            "agentsMail": "emma.weber@luxury-places.ch",
+        
+            "photo1": "property10-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Newly built, minimalist house featuring an outdoor pool and a wine cellar.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 2021,
+                "style": "Modern",
+                "furnished": true,
+                "skiResort": 97
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 2,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": false,
+                "tennisCourt": true,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Tennis Court", "Garden", "Terrace", "Outdoor Pool", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 11,
+            "name": "property11",
+            "ref": "#4075451",
+            "aim": "Sale",
+            "price": "PRICE UPON REQUEST",
+            "type": "Land",
+            "location": "Rural, Ski Resort",
+            "address": "Bellwald, Valais",
+            "addressDetails": "Bellwald, Valais, CH",
+            "size": "-",
+            "beds": "-",
+            "baths": "-",
+            "plot": "1 ha",
+            "tag": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
+        
+            "photo1": "property11-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Vast land near Bellwald Ski Resort, surrounded by mountains and forest.",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": null,
+                "style": "-",
+                "furnished": false,
+                "skiResort": 4
+            },
+        
+            "indoorAmenities": {
+                "terrace": false,
+                "stories": null,
+                "floor": "-",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": null,
+                "garden": false,
+                "outdoorPool": false,
+                "outdoorKitchen": false,
+                "tennisCourt": false,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Mountain View"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        },
+
+        {
+            "id": 12,
+            "name": "property12",
+            "ref": "#4075452",
+            "aim": "rent",
+            "price": "110'000",
+            "type": "House",
+            "location": "Rural",
+            "address": "Lostorf, Gosgen",
+            "addressDetails": "Lostorf, Gosgen, CH",
+            "size": 215,
+            "beds": 5,
+            "baths": 5,
+            "plot": "1 ha",
+            "tag": "",
+        
+            "agent": "Oliver Baumann",
+            "agentsPhone": "+41 78 639 45 83",
+            "agentsPhoto": "agent2.jpg",
+            "agentsMail": "oliver.baumann@luxury-places.ch",
+        
+            "photo1": "property12-1.jpg",
+            "photo2": "property1-2.jpg",
+            "photo3": "property1-3.jpg",
+            "photo4": "property1-4.jpg",
+        
+            "title": "Peaceful, family friendly property offering a beautiful garden greenhouse .",
+            "descriptionPart1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum.",
+            "descriptionPart2": "Vestibulum consequat velit lectus, at pretium velit ultrices vitae. Proin congue mauris sed arcu feugiat, sit amet eleifend velit lacinia. Phasellus eu fermentum nibh. In augue nisi, euismod vel leo eu, aliquam auctor arcu. Fusce consectetur aliquet semper. Suspendisse ullamcorper consectetur eros, et eleifend ipsum ullamcorper sed. ",
+            "descriptionPart3": "Suspendisse tristique orci ligula, sed maximus lectus congue et. Nunc fermentum suscipit ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In fringilla quam in purus consequat, vitae consequat urna consequat.",
+            "descriptionPart4" : "Nam vel venenatis sem. Quisque auctor, enim consectetur pharetra dictum, nibh metus rhoncus lacus, ac dapibus neque ligula sed dui. Nunc pharetra non mi quis laoreet. Suspendisse quam ante, tincidunt non massa pellentesque, rutrum luctus lorem.",
+        
+            "generalInfo": {
+                "status": "Available",
+                "yearBuild": 2012,
+                "style": "Traditional",
+                "furnished": true,
+                "skiResort": 46
+            },
+        
+            "indoorAmenities": {
+                "terrace": true,
+                "stories": 2,
+                "floor": "1&2",
+                "indoorPool": false,
+                "elevator": false,
+            },
+        
+            "outdoorAmenities": {
+                "parking": 3,
+                "garden": true,
+                "outdoorPool": true,
+                "outdoorKitchen": false,
+                "tennisCourt": true,
+                "firePit": false,
+            },
+        
+            "luxuryFeatures": [
+                "Tennis Court", "Garden", "Sauna", "Air Conditioning"
+            ],
+        
+            "areaDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis nisi leo, vitae cursus nulla eleifend ac. Donec egestas metus eget tristique condimentum. Morbi fringilla imperdiet augue eu tempus. Praesent ultrices massa turpis, porttitor rutrum sem bibendum."
+        }
     ]
 }

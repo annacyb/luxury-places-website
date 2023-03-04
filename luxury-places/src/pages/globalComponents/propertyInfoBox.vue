@@ -5,7 +5,7 @@
           <div class="image-mask">
             <img
               alt="property photo1"
-              src="/images/propertyPhotos/property1/property1-1.jpg"
+              :src="imageSource"
               class="image"
             />
           </div>
@@ -108,10 +108,10 @@
 
   <script>
 import propertyTag from './propertyTag.vue';
-import saveButtonPropertyBox from './saveButtonPropertyBox.vue'
+import saveButtonPropertyBox from './saveButtonPropertyBox.vue';
 
     export default {
-    props: {},
+    props: ['imageSource'],
     data() {
         return {};
     },
