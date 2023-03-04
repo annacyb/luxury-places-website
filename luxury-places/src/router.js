@@ -20,8 +20,9 @@ const routes = [
         meta: {title: "Luxury Places - Properties"}
     },
     {
-        path: "/property/:id",
+        path: "/property/:propid",
         name: "Property",
+        props: true,
         component: PropertyDetails,
         meta: {title: "Luxury Places - Property"}
     },

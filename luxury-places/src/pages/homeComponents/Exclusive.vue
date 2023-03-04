@@ -112,12 +112,12 @@
         methods: {
             async getExclProperties() {
                 this.exclProperties = [
-                    await this.getTestProperty(1),
-                    await this.getTestProperty(2),
-                    await this.getTestProperty(5)
+                    await this.getProperty(1),
+                    await this.getProperty(2),
+                    await this.getProperty(5)
                 ]
             },
-            async getTestProperty(propertyID) {
+            async getProperty(propertyID) {
                 let propCollection = collection(db, 'properties')
                 let propQuery = query(propCollection, where('itemID', '==', propertyID))
                 let queryData = await getDocs(propQuery);
@@ -130,7 +130,7 @@
                 });
                 return returnData
             }
-    }
+        }
     }
 </script>
 

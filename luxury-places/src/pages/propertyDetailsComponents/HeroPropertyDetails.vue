@@ -1,11 +1,11 @@
 <template>
     <div class="heroGrid">
         <div class="photoWrapper">
-            <img src="/images/propertyPhotos/property1-1.jpg" alt="background photo" class="backgroundPhoto">
+            <img :src="'/images/propertyPhotos/' + property.photo1" alt="background photo" class="backgroundPhoto">
 
             <div class="contentGrid">
                 <div class="bottomContent">
-                    <h1><span class="price">2'500'000</span> CHF</h1> 
+                    <h1><span class="price">{{ property.price }}</span> CHF</h1> 
                     <div class="type-location-size">
                         <div class="primaryDetails">
                             <img
@@ -13,7 +13,7 @@
                             src="/icons/typeIconGold.svg"
                             class="iconPrimaryDetails"
                             />
-                            <span class="textPrimaryDetails">Apartment</span>
+                            <span class="textPrimaryDetails">{{ property.type }}</span>
                         </div>
                         <div class="primaryDetails">
                             <img
@@ -21,7 +21,7 @@
                             src="/icons/locationIconGold.svg"
                             class="iconPrimaryDetails"
                             />
-                            <span class="textPrimaryDetails">Geneva, Geneva</span>
+                            <span class="textPrimaryDetails"> {{ property.addressDetails }} </span>
                         </div>
                         <div class="primaryDetails">
                             <img
@@ -29,7 +29,7 @@
                             src="/icons/sizeIconGold.svg"
                             class="iconPrimaryDetails"
                             />
-                            <span class="textPrimaryDetails"><span class="size">160</span> m²</span>
+                            <span class="textPrimaryDetails"><span class="size">{{ property.size }}</span> m²</span>
                         </div>
                     </div>
                 </div>
@@ -217,22 +217,46 @@
 
 
 <script>
+
+// firebase settings
+import { collection, getDocs, query, where } from "firebase/firestore";
+
+// import database connection from Firebase
+import db from "../../firebaseInit";
+
 // import child vue components
+
 
 export default {
     components: {},
+    props: ['propertyID'],
     data() {
         return {
             // variables that will be used in HTML 
+            property: {}
         }
     },
 
     // after loading the page, JS runs this function first.
-    created() {
+    async created() {
+        this.property = await this.getProperty(this.propertyID);
     },
 
     // JS functions that I will be using for changing variables in data()
     methods: {
+        async getProperty(propertyID) {
+            let propCollection = collection(db, 'properties')
+            let propQuery = query(propCollection, where('itemID', '==', parseInt(propertyID)))
+            let queryData = await getDocs(propQuery);
+            
+            let returnData = null
+            queryData.forEach((doc) => {
+                // there is only one property in queryData, but firestore requires to iterate
+                // this.testProperty = queryData[0].data()
+                returnData = doc.data()
+            });
+            return returnData
+        }
     }
 }
 </script>

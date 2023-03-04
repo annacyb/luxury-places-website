@@ -2,7 +2,7 @@
     <!-- <div>{{ propertyID }}</div> -->
     <div id="propertiesGrid">
         <NavBar></NavBar>
-        <HeroPropertyDetails id="hero"></HeroPropertyDetails>
+        <HeroPropertyDetails id="hero" :propertyID="propid"></HeroPropertyDetails>
         <DescriptionOverview></DescriptionOverview>
         <PropertyDetailsSection></PropertyDetailsSection>
         <Footer id="footer"></Footer>
@@ -27,6 +27,7 @@ import Footer from './globalComponents/Footer.vue'
 
 export default {
     components: {NavBar, HeroPropertyDetails, DescriptionOverview, PropertyDetailsSection, Footer},
+    props: ['propid'],
     setup() {
     },
     data() {
