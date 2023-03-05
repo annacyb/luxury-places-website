@@ -1,6 +1,3 @@
-<!-- Checking out if changing filters in search bar works on the other pages -->
-<!-- in template, div - {{ filterStore.location }} -->
-
 <template>
     <div id="propertiesGrid">
         <NavBar></NavBar>
@@ -53,7 +50,6 @@
 </style>
 
 <script>
-// import { searchFilters } from '../states/filters.js'
 import NavBar from './globalComponents/NavBar.vue'
 import HeroProperties from './propertiesComponents/HeroProperties.vue'
 import Search from './propertiesComponents/Search.vue'
@@ -63,13 +59,9 @@ import Footer from './globalComponents/Footer.vue'
 export default {
     components: {NavBar, HeroProperties, Search, PropertiesList, Footer},
     setup() {
-        // const filterStore = searchFilters()
-
-        // return {filterStore}
     },
     data() {
-        return {
-        }
+        return {}
     }
 }
 </script>

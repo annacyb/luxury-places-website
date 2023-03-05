@@ -1,5 +1,4 @@
 <template>
-    <!-- <div>{{ propertyID }}</div> -->
     <div id="propertiesGrid">
         <NavBar></NavBar>
         <HeroPropertyDetails id="hero" :propertyID="propid"></HeroPropertyDetails>
@@ -28,10 +27,16 @@ import Footer from './globalComponents/Footer.vue'
 export default {
     components: {NavBar, HeroPropertyDetails, DescriptionOverview, PropertyDetailsSection, Footer},
     props: ['propid'],
-    setup() {
-    },
+    setup() {},
     data() {
-        return {
+        return {}
+    },
+    created() {
+        this.scrollToTop()
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
         }
     }
 }

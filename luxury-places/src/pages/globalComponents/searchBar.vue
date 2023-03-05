@@ -57,7 +57,7 @@
                 multiple
             ></v-combobox>
         </div>
-            <buttonPrimary :buttonName="searchButton"></buttonPrimary>
+            <buttonPrimary :buttonName="searchButton" @click="directToProperties()"></buttonPrimary>
     </div>
 </template>
 
@@ -110,6 +110,10 @@
                 searchButton: 'SEARCH',
             }
         },
-        methods: {}
+        methods: {
+            directToProperties() {
+                this.$router.push("/properties")
+            }
+        }
     }
 </script>

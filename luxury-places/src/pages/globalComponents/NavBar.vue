@@ -2,7 +2,7 @@
     <div class="navSettings">
         <div class="contentGrid">
             <div class="content">
-                <div id="logoWrapper">
+                <div id="logoWrapper" @click="directToHome()">
                     <img id="logoFull" src="/icons/fullLogo-white.svg" alt="Logo Luxury Places">
                 </div>
                 <div class="buttons">
@@ -60,7 +60,12 @@
         width: auto;
         padding-top: 8px;
         padding-bottom: 8px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
+
 
     #logoFull {
         height: inherit;
@@ -122,6 +127,9 @@ export default {
         methods: {
             testme() {
                 console.log("HELLO CONSOLE")
+            },
+            directToHome() {
+                this.$router.push("/")
             }
     
         }

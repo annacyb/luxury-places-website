@@ -5,11 +5,12 @@
                 <div class="sectionTitle">
                     <h2>Exclusive Offers</h2> 
                     <hr class="line">
-                    <buttonSecondary :buttonName="showAllButton"></buttonSecondary>
+                    <buttonSecondary :buttonName="showAllButton" @click="directToProperties()"></buttonSecondary>
                 </div>
                 <div class="propertiesInfoSection">
                     <div v-for="property in exclProperties">
                         <propertyInfoBox 
+                            @click="directToPage(property.itemID)"
                             :imageSource="'/images/propertyPhotos/' + property.photo1" 
                             :pricePlace="property.price"
                             :titlePlace="property.title"
@@ -129,6 +130,12 @@
                     returnData = doc.data()
                 });
                 return returnData
+            },
+            directToProperties() {
+                this.$router.push("/properties")
+            },
+            directToPage(propertyID) {
+                this.$router.push("/property/" + propertyID)
             }
         }
     }

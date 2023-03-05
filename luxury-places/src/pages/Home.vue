@@ -76,6 +76,9 @@
           // this.testProperty = queryData[0].data()
           this.testProperty = doc.data()
         });
+      },
+      directToHome() {
+        this.$router.push("/")
       }
     }
   };

@@ -7,7 +7,7 @@
             <div class="contentGrid">
                 <div class="bottomContent">
                     <h1>16 years of Swiss real estate expertise for your dream home</h1> 
-                    <buttonPrimary :buttonName="namePrimary"></buttonPrimary> 
+                    <buttonPrimary :buttonName="namePrimary" @click="directToProperties()"></buttonPrimary> 
                 </div>
             </div>
         </div>
@@ -90,14 +90,9 @@
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            // async getProperties() {
-            //     const queryProperties = await getDocs(collection(db, "properties"));
-            //     queryProperties.forEach((doc) => {
-            //         this.properties.push(doc.data());
-            //     });
-            // },
-        
-
+            directToProperties() {
+                this.$router.push("/properties")
+            }
         }
     }
 </script>

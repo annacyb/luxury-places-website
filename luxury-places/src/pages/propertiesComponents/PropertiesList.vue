@@ -22,12 +22,10 @@
                     </div>
                     <buttonSelectNavi :buttonName="sortButton" id="sortButton"></buttonSelectNavi>
                 </div>
-                <div class="propertiesInfoSection">
+                <div id="propertiesInfoSection" >
                     <propertyInfoBox></propertyInfoBox>
                     <propertyInfoBox></propertyInfoBox>
                     <propertyInfoBox></propertyInfoBox>
-                </div>
-                <div class="propertiesInfoSection">
                     <propertyInfoBox></propertyInfoBox>
                     <propertyInfoBox></propertyInfoBox>
                     <propertyInfoBox></propertyInfoBox>
@@ -89,10 +87,13 @@
         font-weight: 100;
         color: white;
     } 
-    .propertiesInfoSection {
+
+    #propertiesInfoSection {
         display: flex;
-        column-gap: 20px;
+        column-gap: 19px;
         margin-bottom: 20px;
+        flex-wrap: wrap;
+        row-gap: 24px;
     }
 
     .toggle {
@@ -144,6 +145,7 @@
 
     export default {
         components: {propertySearchBy, buttonSelectNavi, propertyInfoBox},
+        props: ['buttonName', 'iconType'],
         data() {
             return {
                 // variables that will be used in HTML
@@ -169,8 +171,20 @@
                     this.properties.push(doc.data());
                 });
             },
-        
-
+            created() {
+                this.showAllProperties()
+            },
+            methods: {
+                showAllProperties() {
+                    const propertiesWrapper = document.getElementById("propertiesInfoSection");
+                    let propertyComponent = 
+                    propertiesWrapper.forEach((doc) => {
+                    // there is only one property in queryData, but firestore requires to iterate
+                    // this.testProperty = queryData[0].data()
+                    this.testProperty = doc.data()
+                    });
+                }
+            }
         }
     }
 </script>
