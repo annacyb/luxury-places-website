@@ -22,7 +22,9 @@
                             <div id="overviewText">
                                 <p>
                                     {{ property.descriptionPart1 }} 
+                                    <div style="margin-bottom: 12px;"></div>
                                     {{ property.descriptionPart2 }} 
+                                    <div style="margin-bottom: 12px;"></div>
                                     {{ property.descriptionPart3 }} 
                                 </p>
                             </div>

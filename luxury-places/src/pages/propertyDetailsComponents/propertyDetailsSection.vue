@@ -2,10 +2,12 @@
     <div class="background">
         <div class="contentGrid">
             <div class="content">
+                <div id="overviewTextWrapper">
                     <div id="overviewTitle">
-                        <h3>Overview</h3>
+                        <h3>Property Details</h3>
                         <hr class="line">
                     </div>
+                </div>
                     <div class="detailsBox">
                         <div class="left-column">
                             <div class="general-info-wrapper">
@@ -233,7 +235,7 @@
                                             </div>
                                             </div>
                                             <div class="plot">
-                                            <span class="frame2608506-text067"><span>68m2</span></span>
+                                            <span class="frame2608506-text067"><span>{{property.plot}}</span></span>
                                             </div>
                                         </div>
                                         <div class="outdoor1">
@@ -245,7 +247,7 @@
                                             </div>
                                             </div>
                                             <div class="parking">
-                                            <span class="frame2608506-text071">2</span>
+                                            <span class="frame2608506-text071" v-if="property && property.outdoorAmenities">{{ property.outdoorAmenities.parking }}</span>
                                             </div>
                                         </div>
                                         <div class="outdoor1">
@@ -301,7 +303,7 @@
                                             </div>
                                             </div>
                                             <div class="fire-pit">
-                                            <span class="frame2608506-text090"><span>Yes</span></span>
+                                            <span class="frame2608506-text090"><span>No</span></span>
                                         </div>
                                     </div>
                                     </div>
@@ -342,27 +344,7 @@
                                         </div>
                                         <div class="chipsWrapper">
                                             <div class="chips">
-                                                <span class="chipsItem">Terrace</span>
-                                            </div>
-                                        </div>
-                                        <div class="chipsWrapper">
-                                            <div class="chips">
-                                                <span class="chipsItem">Garden</span>
-                                            </div>
-                                        </div>
-                                        <div class="chipsWrapper">
-                                            <div class="chips">
-                                                <span class="chipsItem">Outdoor Pool</span>
-                                            </div>
-                                        </div>
-                                        <div class="chipsWrapper">
-                                            <div class="chips">
-                                                <span class="chipsItem">Fire pit</span>
-                                            </div>
-                                        </div>
-                                        <div class="chipsWrapper">
-                                            <div class="chips">
-                                                <span class="chipsItem">Elevator</span>
+                                                <span class="chipsItem">Indoor Pool</span>
                                             </div>
                                         </div>
                                         <div class="chipsWrapper">
@@ -400,7 +382,7 @@
     .content {
         grid-area: content;
     }
-    .overviewTitle {
+    #overviewTitle {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -409,17 +391,23 @@
         gap: 16px;
         margin-bottom: 4px;
     }
-    .overviewTitle h3 {
+
+    #overviewTextWrapper {
+        padding-top: 40px;
+        padding-bottom: 28px;
+    }
+
+    h3 {
         font-family: 'Goudy Old Style', serif;
         color: colors.$grey1!important;
-        font-size: 1.444rem;
+        font-size: 1.444rem; // 26px
         letter-spacing: 1px;
         font-weight: 100;
     }
     .line {
-        height: 24px;
-        width: 1px;
-        background-color: #5d5d5d99;
+        border-top: 1px solid #161616;
+        opacity: 0.4;
+        flex-grow: 1;
     }
     .detailsBox {
         width: 100%;
@@ -430,6 +418,7 @@
         align-items: flex-start;
         border-color: transparent;
         border-radius: 4px;
+        margin-bottom: 88px;
     }
     .left-column {
         width: 851px;
@@ -439,8 +428,6 @@
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05000000074505806) ;
         align-items: flex-start;
         flex-shrink: 0;
-        border-color: rgba(22, 22, 22, 0.15000000596046448);
-        border-style: solid;
         border-width: 1px;
         margin-right: 0px;
         border-radius: 4px 0 0 4px;
