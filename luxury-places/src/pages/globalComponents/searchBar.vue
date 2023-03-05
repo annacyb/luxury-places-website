@@ -11,7 +11,7 @@
         </div>
         <div class="searchItemLarge">
             <v-text-field 
-                label="Search"
+                label="Search in titles"
                 v-model="filterStore.search"
                 prepend-inner-icon="mdi-magnify"
                 variant="outlined"
@@ -22,7 +22,7 @@
             <v-combobox 
                 label="Type"
                 v-model="filterStore.propertyType"
-                :items="['Apartment' , 'Historical', 'House', 'Land']"
+                :items="['All', 'Apartment' , 'Historical', 'House', 'Land']"
                 variant="underlined"
                 density="comfortable"
             ></v-combobox>
@@ -30,8 +30,8 @@
          <div class="searchItemSmall">
             <v-combobox 
                 label="Region"
-                v-model="filterStore.location"
-                :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
+                v-model="filterStore.region"
+                :items="['Lorem', 'Ipsum', 'Dolor', 'Amet']"
                 variant="underlined"
                 density="comfortable"
                 multiple
@@ -51,13 +51,13 @@
             <v-combobox
                 label="More"
                 v-model="filterStore.more"
-                :items="['Lorem', 'Ipsum', 'Lorem', 'Ipsum']"
+                :items="['Lorem', 'Ipsum', 'Dolor', 'Amet']"
                 variant="underlined"
                 density="comfortable"
                 multiple
             ></v-combobox>
         </div>
-            <buttonPrimary :buttonName="searchButton" @click="directToProperties()"></buttonPrimary>
+            <buttonPrimary :buttonName="searchButton" @click="handleCLick()"></buttonPrimary>
     </div>
 </template>
 
@@ -94,26 +94,82 @@
 <script>
 
     import buttonPrimary from './buttonPrimary.vue';
-    import { searchFilters } from '../../states/filters.js'
+    import { searchFilters } from '../../states/filters.js';
+    import { filteredProperties } from '../../states/filteredProperties.js';
+
+    // firebase settings
+    import { collection, getDocs } from "firebase/firestore";
+
+    // import database connection from Firebase
+    import db from "../../firebaseInit";
 
     export default {
-        // props: ['buttonName', 'iconType', 'iconColor', 'iconSize'],
         components: {buttonPrimary},
         setup() {
             // setting up the filters storage functions in this component
+            const filteredData = filteredProperties()
             const filterStore = searchFilters()
 
-            return {filterStore}
+            return {filteredData, filterStore}
         },
         data() {
             return {
                 searchButton: 'SEARCH',
+                properties: [],
             }
         },
         methods: {
-            directToProperties() {
-                this.$router.push("/properties")
-            }
+            async getProperties() {
+                this.properties = []
+                let propCollection = collection(db, 'properties')
+                let queryData = await getDocs(propCollection);
+                
+                queryData.forEach((doc) => {
+                    this.properties.push(doc.data())
+                })
+            },
+            
+            async filterData() {
+                // download all data
+                await this.getProperties()
+                // apply filters
+                let foundProperties = []
+
+                this.properties.forEach(property => {
+                    if (this.filterStore.aim) {
+                        if (this.filterStore.aim != property.aim) {
+                            return false
+                        }
+                    }
+                    if (this.filterStore.propertyType && (this.filterStore.propertyType != 'All')) {
+                        if (this.filterStore.propertyType != property.type) {
+                            return false
+                        }
+                    }
+                    if (this.filterStore.location.length > 0) {
+                        // check if at least one element is present in both arrays
+                        // https://stackoverflow.com/questions/16312528/check-if-an-array-contains-any-element-of-another-array-in-javascript
+                        if(!this.filterStore.location.some(r => property.location.includes(r))) {
+                            return false
+                        }
+                    }
+                    if (this.filterStore.search.length > 0) {
+                        if (!property.title.includes(this.filterStore.search)) {
+                            return false
+                        }
+                    }
+                    foundProperties.push(property)
+                })
+
+                // save results
+                this.filteredData.properties = foundProperties
+            },
+            async handleCLick() {
+                // 1. Change page to properties
+                this.$router.push("/properties");
+                // 2. Load data with filters
+                await this.filterData()
+            },
         }
     }
 </script>

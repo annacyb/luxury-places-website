@@ -34,52 +34,18 @@
   import AboutUs from "./homeComponents/AboutUs.vue";
   import Testimonials from "./homeComponents/Testimonials.vue";
   import Footer from "./globalComponents/Footer.vue";
-  // firebase settings
-  import { collection, getDocs, query, where } from "firebase/firestore";
-  // import database connection from Firebase
-  import db from "../firebaseInit.js";
+
   export default {
     components: { NavBar, Hero, Search, Exclusive, SearchBy, AboutUs, Testimonials, Footer },
     data() {
       return {
         // variables that will be used in HTML
-        properties: [],
-        testProperty: {},
         nameButton: 'BUTTON',
-        count: 0,
       };
     },
     // after loading the page, JS runs this function first.
-    created() {
-      this.getProperties();
-      this.getTestProperty(2);
-    },
+    created() {},
     // JS functions that I will be using for changing variables in data()
-    methods: {
-      async getProperties() {
-        const queryProperties = await getDocs(collection(db, "properties"));
-
-        queryProperties.forEach((doc) => {
-          this.properties.push(doc.data())
-        });
-      },
-      addToCount() {
-          this.count = this.count + 1;
-      },
-      async getTestProperty(propertyID) {
-        let propCollection = collection(db, 'properties')
-        let propQuery = query(propCollection, where('itemID', '==', propertyID))
-        let queryData = await getDocs(propQuery);
-
-        queryData.forEach((doc) => {
-          // there is only one property in queryData, but firestore requires to iterate
-          // this.testProperty = queryData[0].data()
-          this.testProperty = doc.data()
-        });
-      },
-      directToHome() {
-        this.$router.push("/")
-      }
-    }
+    methods: {}
   };
 </script>

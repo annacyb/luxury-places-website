@@ -18,17 +18,23 @@
                         </v-btn>
 
                     </v-btn-toggle>
-                    <p><span class="propertiesFoundNumber">5</span> properties found</p>
+                    <p><span class="propertiesFoundNumber">{{ filteredData.properties.length }}</span> properties found</p>
                     </div>
                     <buttonSelectNavi :buttonName="sortButton" id="sortButton"></buttonSelectNavi>
                 </div>
-                <div id="propertiesInfoSection" >
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
-                    <propertyInfoBox></propertyInfoBox>
+                <div id="propertiesInfoSection">
+                    <propertyInfoBox v-for="property in filteredData.properties"
+                        @click="directToPage(property.itemID)"
+                        :imageSource="'/images/propertyPhotos/' + property.photo1" 
+                        :pricePlace="property.price"
+                        :titlePlace="property.title"
+                        :typePlace="property.type"
+                        :addressPlace="property.address"
+                        :sizePlace="property.size"
+                        :bedsPlace="property.beds"
+                        :bathsPlace="property.baths"
+                        :plotPlace="property.plot">
+                    </propertyInfoBox>
                 </div>
             </div>
         </div>
@@ -137,53 +143,32 @@
     import buttonSelectNavi from "../globalComponents/buttonSelectNavi.vue";
     import propertyInfoBox from "../globalComponents/propertyInfoBox.vue";
 
-    // firebase settings
-    import { collection, getDocs } from "firebase/firestore";
-
-    // import database connection from Firebase
-    import db from "../../firebaseInit";
+    // import store
+    import { filteredProperties } from '../../states/filteredProperties.js';
 
     export default {
         components: {propertySearchBy, buttonSelectNavi, propertyInfoBox},
         props: ['buttonName', 'iconType'],
+        setup() {
+            // setting up the filters storage functions in this component
+            const filteredData = filteredProperties()
+
+            return {filteredData}
+        },
         data() {
             return {
                 // variables that will be used in HTML
-                properties: [],
                 sortButton: "SORT BY NEWEST",
-                titleName1: "Historical",
-                titleName2: "Houses",
-                titleName3: "Apartments",
-                titleName4: "Lands"
             }
         },
 
         // after loading the page, JS runs this function first.
-        created() {
-            this.getProperties()
-        },
+        created() {},
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            async getProperties() {
-                const queryProperties = await getDocs(collection(db, "properties"));
-                queryProperties.forEach((doc) => {
-                    this.properties.push(doc.data());
-                });
-            },
-            created() {
-                this.showAllProperties()
-            },
-            methods: {
-                showAllProperties() {
-                    const propertiesWrapper = document.getElementById("propertiesInfoSection");
-                    let propertyComponent = 
-                    propertiesWrapper.forEach((doc) => {
-                    // there is only one property in queryData, but firestore requires to iterate
-                    // this.testProperty = queryData[0].data()
-                    this.testProperty = doc.data()
-                    });
-                }
+            directToPage(propertyID) {
+                this.$router.push("/property/" + propertyID)
             }
         }
     }

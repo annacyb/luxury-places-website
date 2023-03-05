@@ -9,10 +9,11 @@ const searchFilters = defineStore("filters", {
        // defining where and what it should save in Local Storage. Example - 'aim' is where and 'Buy' is what, as a default value
         aim: useStorage('aim', 'Buy'),
         search: useStorage('search', ''),
-        propertyType: useStorage('propertyType', []),
+        propertyType: useStorage('propertyType', 'All'),
         location: useStorage('location', []),
-        beds: useStorage('beds', []),
-        more: useStorage('more', [])
+        // region: useStorage('region', []),
+        // beds: useStorage('beds', []),
+        // more: useStorage('more', [])
     };
   }
 });
