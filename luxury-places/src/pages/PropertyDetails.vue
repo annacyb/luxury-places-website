@@ -4,7 +4,7 @@
         <HeroPropertyDetails id="hero" :propertyID="propid"></HeroPropertyDetails>
         <DescriptionOverview :propertyID="propid"></DescriptionOverview>
         <PropertyDetailsSection :propertyID="propid"></PropertyDetailsSection>
-        <Footer id="footer"></Footer>
+        <!-- <Footer id="footer"></Footer> -->
     </div>
 </template>
 

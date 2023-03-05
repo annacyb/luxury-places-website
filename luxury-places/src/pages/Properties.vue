@@ -4,7 +4,7 @@
         <HeroProperties id="hero"></HeroProperties>
         <Search id="search"></Search>
         <PropertiesList id="propertiesList"></PropertiesList>
-        <Footer id="footer"></Footer>
+        <!-- <Footer id="footer"></Footer> -->
     </div>
 </template>
 
@@ -58,10 +58,16 @@ import Footer from './globalComponents/Footer.vue'
 
 export default {
     components: {NavBar, HeroProperties, Search, PropertiesList, Footer},
-    setup() {
-    },
     data() {
         return {}
+    },
+    created() {
+        this.scrollToTop()
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        }
     }
 }
 </script>

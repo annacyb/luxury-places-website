@@ -158,7 +158,7 @@
         data() {
             return {
                 // variables that will be used in HTML
-                sortButton: "SORT BY NEWEST",
+                sortButton: "SORT BY NEWEST"
             }
         },
 

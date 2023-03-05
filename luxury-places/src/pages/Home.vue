@@ -6,9 +6,9 @@
       <Search id="search"></Search>
       <Exclusive id="exclusive"></Exclusive>
       <SearchBy id="searchBy"></SearchBy>
-      <AboutUs id="aboutUs"></AboutUs>
+      <!-- <AboutUs id="aboutUs"></AboutUs>
       <Testimonials id="testimonials"></Testimonials>
-      <Footer id="footer"></Footer>
+      <Footer id="footer"></Footer> -->
       <!-- {{ testProperty.outdoorAmenities.firePit }} -->
   </div>
 </template>
@@ -39,13 +39,17 @@
     components: { NavBar, Hero, Search, Exclusive, SearchBy, AboutUs, Testimonials, Footer },
     data() {
       return {
-        // variables that will be used in HTML
-        nameButton: 'BUTTON',
-      };
+        nameButton: 'BUTTON'
+      }
+    }
+    ,
+    created() {
+        this.scrollToTop()
     },
-    // after loading the page, JS runs this function first.
-    created() {},
-    // JS functions that I will be using for changing variables in data()
-    methods: {}
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+    }
   };
 </script>

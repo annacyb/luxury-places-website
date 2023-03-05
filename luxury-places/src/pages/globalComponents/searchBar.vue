@@ -118,6 +118,9 @@
                 properties: [],
             }
         },
+        async created() {
+            await this.filterData()
+        },
         methods: {
             async getProperties() {
                 this.properties = []

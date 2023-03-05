@@ -82,6 +82,7 @@
     flex-direction: row;
     justify-content: flex-start;
     background-color: rgba(217, 217, 217, 1);
+    overflow: hidden;
   }
   .image {
     top: -10px;
@@ -192,6 +193,7 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: none;
+    width: min-content;
   }
   .type-location-size {
     width: 367px;
