@@ -6,10 +6,9 @@
       <Search id="search"></Search>
       <Exclusive id="exclusive"></Exclusive>
       <SearchBy id="searchBy"></SearchBy>
-      <!-- <AboutUs id="aboutUs"></AboutUs>
+      <AboutUs id="aboutUs"></AboutUs>
       <Testimonials id="testimonials"></Testimonials>
-      <Footer id="footer"></Footer> -->
-      <!-- {{ testProperty.outdoorAmenities.firePit }} -->
+      <Footer id="footer"></Footer>
   </div>
 </template>
 
