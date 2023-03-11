@@ -11,7 +11,6 @@
         </div>
         <div class="top-elements">
           <div class="tagsWrapper">
-            <!-- <propertyTag tagName="EXCLUSIVE"></propertyTag> -->
             <propertyTag tagName="VIDEO"></propertyTag>
           </div>
           <saveButtonPropertyBox></saveButtonPropertyBox>
@@ -22,7 +21,7 @@
           <div class="price-and-description">
             <div class="priceWrapper">
               <span class="price">
-                <span>{{ pricePlace }}<span class="currency"></span></span>
+                <span>{{ getPrice() }}</span>
               </span>
             </div>
             <div class="descriptionWrapper">
@@ -109,11 +108,24 @@
 <script>
 import propertyTag from './propertyTag.vue';
 import saveButtonPropertyBox from './saveButtonPropertyBox.vue';
+import { preferences } from '../../states/globalPreferences.js';
+import { calculatePrice } from '../../functions/currency.js'
 
-  export default {
+export default {
   props: ['imageSource', 'pricePlace', 'titlePlace', 'typePlace', 'addressPlace', 'sizePlace', 'bedsPlace', 'bathsPlace', 'plotPlace'],
+  setup() {
+    // setting up the filters storage functions in this component
+    const preferencesData = preferences()
+
+    return {preferencesData}
+  },
   data() {
       return {};
+  },
+  methods: {
+    getPrice() {
+      return calculatePrice(this.pricePlace, this.preferencesData)
+    }
   },
   components: { propertyTag, saveButtonPropertyBox }
 }

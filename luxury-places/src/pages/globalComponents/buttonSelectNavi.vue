@@ -1,5 +1,5 @@
 <template>
-    <div @click="testme()" class="buttonSelectNavi"> {{ buttonName }}<i class="arrowDown"></i></div>
+    <div class="buttonSelectNavi"> {{ buttonName }}<i class="arrowDown"></i></div>
 </template>
 
 <style scoped lang="scss">

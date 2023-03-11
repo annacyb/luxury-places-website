@@ -12,8 +12,22 @@
                     </div>
                     <div class="line"></div>
                     <div class="selectButtons">
-                        <buttonSelectNavi :buttonName="languageButton"></buttonSelectNavi>
-                        <buttonSelectNavi :buttonName="currencyButton"></buttonSelectNavi>
+                        <div class="d-flex flex-column">
+                            <v-select
+                            :items="language"
+                            v-model="sel_language"
+                            label=""
+                            ></v-select>
+                        </div>
+            
+                        <div class="d-flex flex-column">
+                            <v-select
+                            :items="currency"
+                            v-model="preferencesData.currency"
+                            label=""
+                            ></v-select>
+                        </div>
+
                     </div>
                     <MenuButton></MenuButton>
                 </div>
@@ -29,6 +43,20 @@
   @use "../../sass/base/typo";
   @use "../../sass/components/navBar";
 
+
+// changing CSS of language and currency select buttons (changing Vuetify components)
+    .v-input {
+        width: 92px;
+        margin-top: 4px;
+    }
+    div.v-select {
+        font-family: "Segoe UI" !important;
+        font-size: 18.9px !important;
+	    font-weight: 400 !important;
+    }
+
+
+// rest of the component's css
   .navSettings {
     position: absolute;
     left: 0px;
@@ -106,15 +134,23 @@ import buttonSelectNavi from './buttonSelectNavi.vue';
 import Icon from './Icon.vue';
 import MenuButton from './MenuButton.vue'
 
+import { preferences } from '../../states/globalPreferences.js';
+
 export default {
         components: { buttonNavi, Icon, buttonSelectNavi, MenuButton },
+        setup() {
+            // setting up the filters storage functions in this component
+            const preferencesData = preferences()
+            return {preferencesData}
+        },
         data() {
             return {
                 // variables that will be used in HTML
                 savedButtonNavi: "SAVED",
                 loginButtonNavi: "JOIN/LOG IN",
-                languageButton: "EN",
-                currencyButton: "CHF"
+                language: ['ENG', 'FRA', 'GER', 'ITA'],
+                sel_language: 'ENG',
+                currency: ['CHF', 'EUR', 'GBP', 'USD']
             }
         },
 
@@ -125,13 +161,9 @@ export default {
 
         // JS functions that I will be using for changing variables in data()
         methods: {
-            testme() {
-                console.log("HELLO CONSOLE")
-            },
             directToHome() {
                 this.$router.push("/")
-            }
-    
+            }    
         }
     }
 </script>

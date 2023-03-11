@@ -5,7 +5,7 @@
 
             <div class="contentGrid">
                 <div class="bottomContent">
-                    <h1><span class="price">{{ property.price }}</span></h1> 
+                    <h1><span class="price">{{ getPrice() }}</span></h1> 
                     <div class="type-location-size">
                         <div class="primaryDetails">
                             <img
@@ -224,12 +224,22 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 // import database connection from Firebase
 import db from "../../firebaseInit";
 
-// import child vue components
+// import store
+import { preferences } from '../../states/globalPreferences.js';
+
+// import functions
+import { calculatePrice } from "../../functions/currency";
 
 
 export default {
     components: {},
     props: ['propertyID'],
+    setup() {
+        // setting up the filters storage functions in this component
+        const preferencesData = preferences()
+
+        return {preferencesData}
+    },
     data() {
         return {
             // variables that will be used in HTML 
@@ -251,11 +261,14 @@ export default {
             
             let returnData = null
             queryData.forEach((doc) => {
-                // there is only one property in queryData, but firestore requires to iterate
-                // this.testProperty = queryData[0].data()
                 returnData = doc.data()
             });
             return returnData
+        },
+        getPrice() {
+            if (this.property.price) {
+                return calculatePrice(this.property.price, this.preferencesData)
+            }
         }
     }
 }
