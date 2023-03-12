@@ -93,7 +93,7 @@
 
     .background {
         background-color: colors.$white;
-        padding-bottom: 104px;
+        padding-bottom: 124px;
         // height: 698px;
         // width: 100vw;
     }

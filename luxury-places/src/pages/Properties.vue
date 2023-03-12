@@ -4,7 +4,7 @@
         <HeroProperties id="hero"></HeroProperties>
         <Search id="search"></Search>
         <PropertiesList id="propertiesList"></PropertiesList>
-        <!-- <Footer id="footer"></Footer> -->
+        <Footer id="footer"></Footer>
     </div>
 </template>
 

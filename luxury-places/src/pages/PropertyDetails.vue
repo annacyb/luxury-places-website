@@ -4,7 +4,7 @@
         <HeroPropertyDetails id="hero" :propertyID="propid"></HeroPropertyDetails>
         <DescriptionOverview :propertyID="propid"></DescriptionOverview>
         <PropertyDetailsSection :propertyID="propid"></PropertyDetailsSection>
-        <!-- <Footer id="footer"></Footer> -->
+        <Footer id="footer"></Footer>
     </div>
 </template>
 
@@ -17,7 +17,6 @@
 
 
 <script>
-// import { searchFilters } from '../states/filters.js'
 import NavBar from './globalComponents/NavBar.vue'
 import HeroPropertyDetails from './propertyDetailsComponents/HeroPropertyDetails.vue'
 import DescriptionOverview from './propertyDetailsComponents/descriptionOverview.vue'
