@@ -75,9 +75,7 @@
             }
         },
         methods: {
-            testme() {
-                console.log("HELLO CONSOLE")
-            }
+
         }
     }
 </script>

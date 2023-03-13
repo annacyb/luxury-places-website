@@ -57,8 +57,6 @@
 
 
 <script>
-    // import Icon from './Icon.vue'
-
     export default {
         props: ['buttonName'],
         // components: {Icon},

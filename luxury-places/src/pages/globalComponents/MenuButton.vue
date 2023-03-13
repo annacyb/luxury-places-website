@@ -1,5 +1,5 @@
 <template>
-    <div @click="testme()" class="iconWrapper">
+    <div class="iconWrapper">
         <i class="menuIcon"></i>
     </div>
 </template>

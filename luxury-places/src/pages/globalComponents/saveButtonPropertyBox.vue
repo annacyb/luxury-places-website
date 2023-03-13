@@ -58,7 +58,6 @@
 
     export default {
         props: ['buttonName'],
-        // components: {Icon},
         data() {
             return {
                 // iconName: 'iconNavi'

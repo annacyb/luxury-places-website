@@ -37,19 +37,6 @@
         font-family: typo.$font1;
         font-weight: 100;
 
-        // &:hover {
-        //     transition: all 100ms linear;
-        //     border-bottom: 1px solid white;
-        //     // color: colors.$gold3;
-        //     // background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 100%);
-        // }
-        
-        // &:active {
-        //     transition: all 200ms linear;
-        //     border-bottom: 1px solid white;
-        //     // background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.4) 100%);
-        // }
-
         .arrowRight {
             height: 24px;
             width: 24px;
@@ -62,14 +49,12 @@
 
 
 <script>
-    // import Icon from './Icon.vue'
 
     export default {
-        // props: ['buttonName'],
-        // components: {Icon},
+
         data() {
             return {
-                // iconName: 'iconNavi'
+
             }
         },
         methods: {

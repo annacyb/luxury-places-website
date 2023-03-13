@@ -54,14 +54,6 @@
 
 
 <script>
-// import child vue components
-
-
-// firebase settings
-import { collection, getDocs } from "firebase/firestore";
-
-// import database connection from Firebase
-import db from "../../firebaseInit";
 
 export default {
     components: {},
@@ -74,18 +66,11 @@ export default {
 
     // after loading the page, JS runs this function first.
     created() {
-        // this.getProperties()
+
     },
 
     // JS functions that I will be using for changing variables in data()
     methods: {
-        // async getProperties() {
-        //     const queryProperties = await getDocs(collection(db, "properties"));
-        //     queryProperties.forEach((doc) => {
-        //         this.properties.push(doc.data());
-        //     });
-        // },
-    
 
     }
 }

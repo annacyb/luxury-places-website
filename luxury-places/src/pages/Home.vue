@@ -1,7 +1,7 @@
 <!-- HTML -->
 <template>
   <div id="homeGrid">
-      <NavBar :buttonName="nameButton"></NavBar>
+      <NavBar></NavBar>
       <Hero id="hero"></Hero>
       <Search id="search"></Search>
       <Exclusive id="exclusive"></Exclusive>
@@ -38,7 +38,6 @@
     components: { NavBar, Hero, Search, Exclusive, SearchBy, AboutUs, Testimonials, Footer },
     data() {
       return {
-        nameButton: 'BUTTON'
       }
     }
     ,

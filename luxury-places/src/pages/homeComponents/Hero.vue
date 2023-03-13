@@ -68,12 +68,6 @@
     // import child vue components
     import buttonPrimary from '../globalComponents/buttonPrimary.vue'
 
-    // firebase settings
-    import { collection, getDocs } from "firebase/firestore";
-
-    // import database connection from Firebase
-    import db from "../../firebaseInit";
-
     export default {
         components: {buttonPrimary},
         data() {

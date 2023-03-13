@@ -490,7 +490,7 @@
                   // this.testProperty = queryData[0].data()
                   returnData = doc.data()
               });
-              return returnData 
+              return returnData
           }
       }
   }

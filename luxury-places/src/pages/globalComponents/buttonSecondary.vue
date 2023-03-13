@@ -1,5 +1,5 @@
 <template>
-    <div @click="testme()" class="buttonSecondary">{{ buttonName }}</div>
+    <div class="buttonSecondary">{{ buttonName }}</div>
 </template>
 
 <style scoped lang="scss">
@@ -63,9 +63,7 @@
             }
         },
         methods: {
-            testme() {
-                console.log("HELLO CONSOLE")
-            }
+
         }
     }
 </script>
